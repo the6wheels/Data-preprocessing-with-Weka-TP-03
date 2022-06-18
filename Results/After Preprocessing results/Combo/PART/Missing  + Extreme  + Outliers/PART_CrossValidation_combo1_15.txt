@@ -1,0 +1,143 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.InterquartileRange-Rfirst-last-O3.0-E6.0-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Llast-weka.filters.unsupervised.attribute.Remove-R32-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Llast-weka.filters.unsupervised.attribute.Remove-R31
+Instances:    3439
+Attributes:   30
+              age
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              FTI_measured
+              FTI
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    15-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+T3 > 1.1 AND
+TT4 > 57 AND
+FTI <= 163: negative (3066.0)
+
+FTI > 155 AND
+on_thyroxine = t: negative (43.0)
+
+T3 <= 1.1 AND
+referral_source = SVI AND
+FTI <= 153 AND
+TT4 > 49 AND
+FTI > 69: sick (153.0)
+
+sick = f AND
+T4U_measured = t AND
+T3 > 2.7: negative (15.0)
+
+T4U_measured = t AND
+sick = f AND
+TSH_measured = t AND
+FTI <= 52: sick (12.0/1.0)
+
+T3_measured = f: negative (20.0)
+
+sick = f AND
+T4U_measured = f: negative (8.0)
+
+sick = f AND
+query_hypothyroid = t AND
+TT4 <= 156: sick (5.0)
+
+sick = f AND
+query_hypothyroid = f AND
+referral_source = other AND
+TT4 > 155 AND
+T3 > 1.7: sick (7.0)
+
+sick = f AND
+referral_source = other AND
+age <= 70: negative (37.0/2.0)
+
+sick = f AND
+FTI > 157 AND
+FTI <= 176: negative (20.0/1.0)
+
+sick = f AND
+age > 77: sick (11.0)
+
+sick = f AND
+referral_source = SVHC AND
+T3 <= 1.5: sick (5.0)
+
+sick = f AND
+referral_source = SVI AND
+TSH > 0.3 AND
+TT4 > 49 AND
+TT4 <= 83: sick (8.0/1.0)
+
+sick = f AND
+TSH > 0.3 AND
+referral_source = SVI: negative (9.0)
+
+sick = f AND
+referral_source = SVI: sick (6.0)
+
+sick = f AND
+T3 > 0.8: negative (5.0)
+
+: sick (9.0/1.0)
+
+Number of Rules  : 	18
+
+
+Time taken to build model: 0.08 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3401               98.895  %
+Incorrectly Classified Instances        38                1.105  %
+Kappa statistic                          0.9069
+Mean absolute error                      0.012 
+Root mean squared error                  0.1011
+Relative absolute error                 10.1977 %
+Root relative squared error             41.6546 %
+Total Number of Instances             3439     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.993    0.079    0.995      0.993    0.994      0.907    0.970     0.996     negative
+                 0.921    0.007    0.905      0.921    0.913      0.907    0.970     0.886     sick
+Weighted Avg.    0.989    0.074    0.989      0.989    0.989      0.907    0.970     0.989     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3202   21 |    a = negative
+   17  199 |    b = sick
+

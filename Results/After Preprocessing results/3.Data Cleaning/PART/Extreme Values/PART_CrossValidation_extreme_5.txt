@@ -1,0 +1,172 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.InterquartileRange-Rfirst-last-O3.0-E6.0-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Llast-weka.filters.unsupervised.attribute.Remove-R31-32
+Instances:    3627
+Attributes:   30
+              age
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              FTI_measured
+              FTI
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    5-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+T3 > 1.1 AND
+FTI <= 171 AND
+TT4 > 56: negative (3230.0/1.0)
+
+T3 > 1.8 AND
+referral_source = other AND
+on_thyroxine = t: negative (30.0)
+
+T3 > 1.9 AND
+referral_source = other AND
+query_hyperthyroid = t: negative (15.0)
+
+referral_source = SVI AND
+FTI <= 157 AND
+TT4 > 53 AND
+FTI > 65: sick (157.0)
+
+T3 > 2.6: negative (30.0)
+
+sick = f AND
+T4U_measured = t AND
+TSH_measured = t AND
+referral_source = other AND
+query_on_thyroxine = f AND
+age <= 77 AND
+query_hyperthyroid = f AND
+T3_measured = t AND
+TT4 <= 156 AND
+T3 > 0.8: negative (19.0)
+
+sick = f AND
+T4U_measured = t AND
+TSH_measured = f: negative (11.0/1.0)
+
+T4U_measured = t AND
+sick = f AND
+T3_measured = f AND
+sex = F: negative (10.0)
+
+T4U_measured = t AND
+sick = f AND
+T3_measured = t AND
+referral_source = other AND
+query_on_thyroxine = f AND
+age <= 75 AND
+query_hypothyroid = f AND
+T3 <= 1.7 AND
+T3 > 0.5: negative (14.0/2.0)
+
+T4U_measured = t AND
+sick = f AND
+T3_measured = t AND
+referral_source = other AND
+query_on_thyroxine = f AND
+query_hypothyroid = f AND
+age > 40: sick (15.0)
+
+T4U_measured = t AND
+sick = f AND
+T3_measured = t AND
+referral_source = SVHC: sick (9.0/1.0)
+
+T4U_measured = f: negative (7.0)
+
+sick = t: sick (5.0)
+
+T3_measured = t AND
+referral_source = other AND
+query_on_thyroxine = f AND
+age > 34 AND
+age <= 74: negative (4.0)
+
+T3_measured = t AND
+referral_source = other AND
+query_on_thyroxine = f: sick (5.0)
+
+T3_measured = t AND
+referral_source = SVI AND
+query_hypothyroid = f AND
+sex = M AND
+TT4 <= 70 AND
+T4U > 0.67: sick (11.0)
+
+T3_measured = t AND
+referral_source = SVI AND
+sex = F AND
+query_hypothyroid = f AND
+age > 47 AND
+T3 <= 1.9: negative (26.0/6.0)
+
+T3_measured = t AND
+sex = F AND
+query_hypothyroid = f AND
+referral_source = SVI: sick (11.0/1.0)
+
+T3_measured = t: negative (15.0/2.0)
+
+: sick (3.0)
+
+Number of Rules  : 	20
+
+
+Time taken to build model: 0.2 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3562               98.2079 %
+Incorrectly Classified Instances        65                1.7921 %
+Kappa statistic                          0.8463
+Mean absolute error                      0.0191
+Root mean squared error                  0.1265
+Relative absolute error                 16.2679 %
+Root relative squared error             52.3149 %
+Total Number of Instances             3627     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.991    0.146    0.990      0.991    0.990      0.846    0.953     0.993     negative
+                 0.854    0.009    0.858      0.854    0.856      0.846    0.953     0.832     sick
+Weighted Avg.    0.982    0.138    0.982      0.982    0.982      0.846    0.953     0.983     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3369   32 |    a = negative
+   33  193 |    b = sick
+

@@ -1,0 +1,185 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.Discretize-D-B5-M-1.0-Rfirst-last-precision6
+Instances:    3772
+Attributes:   48
+              age_1
+              age_2
+              age_3
+              age_4
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH_1
+              TSH_2
+              TSH_3
+              TSH_4
+              T3_measured
+              T3_1
+              T3_2
+              T3_3
+              T3_4
+              TT4_measured
+              TT4_1
+              TT4_2
+              TT4_3
+              TT4_4
+              T4U_measured
+              T4U_1
+              T4U_2
+              T4U_3
+              T4U_4
+              FTI_measured
+              FTI_1
+              FTI_2
+              FTI_3
+              FTI_4
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    split 60.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+referral_source = other AND
+age_1 = '(-inf-91.8]' AND
+FTI_2 = '(-inf-159.2]' AND
+query_hypothyroid = f: negative (1878.08/16.0)
+
+T3_1 = '(2.16-inf)': negative (656.23/7.04)
+
+T3_measured = t AND
+referral_source = SVHC AND
+query_hypothyroid = f: negative (194.0/6.0)
+
+T3_measured = t AND
+thyroid_surgery = f AND
+psych = f AND
+TT4_1 = '(87.6-inf)' AND
+TSH_measured = t AND
+TT4_2 = '(-inf-173.2]': negative (585.16/97.0)
+
+T3_measured = f: negative (126.02/1.96)
+
+thyroid_surgery = f AND
+T4U_measured = t AND
+T4U_2 = '(1.078-inf)': negative (32.0/2.0)
+
+thyroid_surgery = f AND
+T4U_measured = f: negative (16.84/1.0)
+
+thyroid_surgery = f AND
+query_hyperthyroid = f AND
+TSH_1 = '(-inf-106.004]' AND
+on_thyroxine = f AND
+sick = t AND
+referral_source = SVI: sick (16.0/4.0)
+
+thyroid_surgery = f AND
+query_hyperthyroid = f AND
+TSH_1 = '(-inf-106.004]' AND
+on_thyroxine = f AND
+referral_source = SVI AND
+T4U_1 = '(0.664-inf)' AND
+sex = F: negative (101.09/28.1)
+
+thyroid_surgery = f AND
+psych = f AND
+query_hyperthyroid = f AND
+TSH_1 = '(-inf-106.004]' AND
+on_thyroxine = f AND
+TT4_2 = '(-inf-173.2]' AND
+referral_source = SVI AND
+query_on_thyroxine = f AND
+FTI_1 = '(80.6-inf)' AND
+T4U_1 = '(0.664-inf)': negative (56.46/16.45)
+
+thyroid_surgery = f AND
+query_hyperthyroid = f AND
+on_thyroxine = f AND
+TSH_1 = '(-inf-106.004]' AND
+referral_source = SVI AND
+psych = f AND
+sex = M: sick (35.05/12.72)
+
+psych = f AND
+thyroid_surgery = f AND
+sex = M: negative (14.69/1.03)
+
+sex = F AND
+thyroid_surgery = f AND
+query_hyperthyroid = f AND
+FTI_1 = '(-inf-80.6]': negative (13.8/3.09)
+
+sex = F AND
+thyroid_surgery = t: negative (9.32)
+
+query_hyperthyroid = f AND
+sex = F AND
+on_thyroxine = t: negative (6.0/1.0)
+
+query_hyperthyroid = f AND
+sex = F AND
+referral_source = other AND
+query_hypothyroid = f: sick (5.0)
+
+sex = F AND
+query_hyperthyroid = f AND
+TT4_1 = '(-inf-87.6]' AND
+psych = f: negative (14.22/6.0)
+
+psych = f: negative (6.03/0.0)
+
+: sick (6.0/1.0)
+
+Number of Rules  : 	19
+
+
+Time taken to build model: 0.15 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1419               94.0358 %
+Incorrectly Classified Instances        90                5.9642 %
+Kappa statistic                          0.149 
+Mean absolute error                      0.0893
+Root mean squared error                  0.2196
+Relative absolute error                 77.8782 %
+Root relative squared error             93.2002 %
+Total Number of Instances             1509     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.993    0.899    0.946      0.993    0.969      0.199    0.850     0.982     negative
+                 0.101    0.007    0.474      0.101    0.167      0.199    0.850     0.265     sick
+Weighted Avg.    0.940    0.846    0.918      0.940    0.922      0.199    0.850     0.940     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1410   10 |    a = negative
+   80    9 |    b = sick
+

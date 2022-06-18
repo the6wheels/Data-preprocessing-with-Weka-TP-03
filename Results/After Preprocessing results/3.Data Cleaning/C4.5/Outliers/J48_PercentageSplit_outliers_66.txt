@@ -1,0 +1,129 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.InterquartileRange-Rfirst-last-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R32-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Llast-weka.filters.unsupervised.attribute.Remove-R31
+Instances:    3548
+Attributes:   30
+              age
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              FTI_measured
+              FTI
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+T3 <= 1.1
+|   TT4 <= 53
+|   |   TSH <= 13
+|   |   |   FTI <= 69: sick (8.0/1.0)
+|   |   |   FTI > 69: negative (7.0)
+|   |   TSH > 13: negative (32.0)
+|   TT4 > 53
+|   |   FTI <= 155
+|   |   |   referral_source = SVHC: sick (9.0)
+|   |   |   referral_source = other
+|   |   |   |   sick = f
+|   |   |   |   |   query_hypothyroid = f
+|   |   |   |   |   |   on_thyroxine = f
+|   |   |   |   |   |   |   age <= 70: negative (19.0)
+|   |   |   |   |   |   |   age > 70: sick (10.0/1.0)
+|   |   |   |   |   |   on_thyroxine = t
+|   |   |   |   |   |   |   FTI <= 110: sick (2.0)
+|   |   |   |   |   |   |   FTI > 110: negative (4.0/1.0)
+|   |   |   |   |   query_hypothyroid = t: sick (5.0/1.0)
+|   |   |   |   sick = t: sick (3.0)
+|   |   |   referral_source = SVI
+|   |   |   |   FTI <= 70
+|   |   |   |   |   T4U <= 1.02: sick (7.0)
+|   |   |   |   |   T4U > 1.02: negative (2.0)
+|   |   |   |   FTI > 70: sick (152.0)
+|   |   |   referral_source = STMW: sick (0.0)
+|   |   |   referral_source = SVHD: sick (3.0)
+|   |   FTI > 155
+|   |   |   TT4 <= 92: sick (3.0)
+|   |   |   TT4 > 92: negative (13.0)
+T3 > 1.1
+|   FTI <= 171
+|   |   TT4 <= 56
+|   |   |   referral_source = SVHC: negative (4.0)
+|   |   |   referral_source = other: negative (25.0/1.0)
+|   |   |   referral_source = SVI
+|   |   |   |   TSH <= 13: sick (7.0)
+|   |   |   |   TSH > 13: negative (5.0)
+|   |   |   referral_source = STMW: negative (1.0)
+|   |   |   referral_source = SVHD: negative (0.0)
+|   |   TT4 > 56: negative (3157.0/1.0)
+|   FTI > 171
+|   |   on_thyroxine = f
+|   |   |   T3_measured = t
+|   |   |   |   T3 <= 2.8
+|   |   |   |   |   TSH <= 0.31: sick (13.0/1.0)
+|   |   |   |   |   TSH > 0.31: negative (6.0)
+|   |   |   |   T3 > 2.8: negative (14.0)
+|   |   |   T3_measured = f: negative (12.0)
+|   |   on_thyroxine = t: negative (25.0)
+
+Number of Leaves  : 	29
+
+Size of the tree : 	51
+
+
+Time taken to build model: 0.1 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1185               98.2587 %
+Incorrectly Classified Instances        21                1.7413 %
+Kappa statistic                          0.828 
+Mean absolute error                      0.0174
+Root mean squared error                  0.1264
+Relative absolute error                 15.5142 %
+Root relative squared error             57.4788 %
+Total Number of Instances             1206     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.988    0.115    0.994      0.988    0.991      0.829    0.939     0.994     negative
+                 0.885    0.012    0.794      0.885    0.837      0.829    0.939     0.788     sick
+Weighted Avg.    0.983    0.110    0.984      0.983    0.983      0.829    0.939     0.983     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1131   14 |    a = negative
+    7   54 |    b = sick
+

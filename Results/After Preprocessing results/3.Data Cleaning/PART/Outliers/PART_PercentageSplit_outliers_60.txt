@@ -1,0 +1,169 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.InterquartileRange-Rfirst-last-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R32-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Llast-weka.filters.unsupervised.attribute.Remove-R31
+Instances:    3548
+Attributes:   30
+              age
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              FTI_measured
+              FTI
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    split 60.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+T3 > 1.1 AND
+FTI <= 171 AND
+TT4 > 56: negative (3157.0/1.0)
+
+referral_source = SVI AND
+TSH <= 13 AND
+FTI <= 157 AND
+TT4 > 50 AND
+FTI > 64: sick (157.0)
+
+sick = f AND
+T4U_measured = t AND
+referral_source = other AND
+age <= 77 AND
+query_hypothyroid = f AND
+T3_measured = t AND
+TT4 <= 58: negative (31.0)
+
+sick = f AND
+T4U_measured = t AND
+T3 > 2 AND
+on_thyroxine = t: negative (24.0)
+
+sick = f AND
+T4U_measured = t AND
+T3 <= 2.8 AND
+TSH_measured = t AND
+referral_source = SVI AND
+TSH > 9.8: negative (20.0)
+
+sick = f AND
+T4U_measured = t AND
+T3 > 2.8: negative (14.0)
+
+sick = f AND
+T4U_measured = f: negative (12.0)
+
+sick = f AND
+TSH_measured = f: negative (11.0/1.0)
+
+sick = f AND
+referral_source = SVHC: sick (9.0/1.0)
+
+sick = f AND
+referral_source = other AND
+query_on_thyroxine = f AND
+age > 77: sick (9.0/1.0)
+
+sick = f AND
+referral_source = other AND
+query_on_thyroxine = f AND
+query_hyperthyroid = f AND
+T3_measured = t AND
+query_hypothyroid = t AND
+T3 > 0.9: negative (7.0)
+
+sick = f AND
+FTI <= 66: sick (19.0/2.0)
+
+sick = f AND
+query_hypothyroid = f AND
+T3_measured = t AND
+TSH > 0.025 AND
+referral_source = SVI AND
+sex = F AND
+FTI <= 176: negative (11.0/1.0)
+
+sick = f AND
+T3_measured = f: negative (8.0)
+
+sick = f AND
+query_hypothyroid = f AND
+TSH > 0.025 AND
+referral_source = SVI AND
+sex = M: negative (6.0)
+
+sick = f AND
+query_hypothyroid = f AND
+referral_source = other AND
+TT4 <= 155 AND
+T4U > 0.56 AND
+TSH <= 34: negative (21.0/1.0)
+
+TT4 <= 161: sick (21.0)
+
+TSH <= 0.32 AND
+referral_source = other AND
+age > 54: negative (3.0/1.0)
+
+TSH <= 0.32: sick (5.0)
+
+: negative (3.0)
+
+Number of Rules  : 	20
+
+
+Time taken to build model: 0.12 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1393               98.1677 %
+Incorrectly Classified Instances        26                1.8323 %
+Kappa statistic                          0.8298
+Mean absolute error                      0.0186
+Root mean squared error                  0.127 
+Relative absolute error                 16.2232 %
+Root relative squared error             56.6143 %
+Total Number of Instances             1419     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.986    0.093    0.995      0.986    0.990      0.832    0.970     0.997     negative
+                 0.907    0.014    0.782      0.907    0.840      0.832    0.970     0.866     sick
+Weighted Avg.    0.982    0.089    0.983      0.982    0.982      0.832    0.970     0.990     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1325   19 |    a = negative
+    7   68 |    b = sick
+

@@ -1,0 +1,120 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.InterquartileRange-Rfirst-last-O3.0-E6.0-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Llast-weka.filters.unsupervised.attribute.Remove-R32-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Llast-weka.filters.unsupervised.attribute.Remove-R31
+Instances:    3439
+Attributes:   30
+              age
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              FTI_measured
+              FTI
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    5-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+T3 <= 1.1
+|   FTI <= 155
+|   |   referral_source = SVHC: sick (9.0)
+|   |   referral_source = other
+|   |   |   sick = f
+|   |   |   |   age <= 70: negative (21.0)
+|   |   |   |   age > 70
+|   |   |   |   |   T4U <= 0.95: sick (10.0)
+|   |   |   |   |   T4U > 0.95: negative (4.0/1.0)
+|   |   |   sick = t: sick (3.0)
+|   |   referral_source = SVI
+|   |   |   TT4 <= 49
+|   |   |   |   FTI <= 64: sick (5.0)
+|   |   |   |   FTI > 64: negative (7.0)
+|   |   |   TT4 > 49
+|   |   |   |   FTI <= 69
+|   |   |   |   |   T4U <= 0.96: sick (7.0)
+|   |   |   |   |   T4U > 0.96: negative (2.0)
+|   |   |   |   FTI > 69: sick (154.0)
+|   |   referral_source = STMW: sick (0.0)
+|   |   referral_source = SVHD: sick (3.0)
+|   FTI > 155
+|   |   TT4 <= 92: sick (3.0)
+|   |   TT4 > 92: negative (13.0)
+T3 > 1.1
+|   TT4 <= 57
+|   |   referral_source = SVHC: negative (5.0)
+|   |   referral_source = other: negative (15.0/1.0)
+|   |   referral_source = SVI: sick (7.0)
+|   |   referral_source = STMW: negative (0.0)
+|   |   referral_source = SVHD: negative (0.0)
+|   TT4 > 57
+|   |   FTI <= 163: negative (3066.0)
+|   |   FTI > 163
+|   |   |   on_thyroxine = f
+|   |   |   |   T3_measured = t
+|   |   |   |   |   TT4 <= 151: negative (19.0)
+|   |   |   |   |   TT4 > 151
+|   |   |   |   |   |   T3 <= 2.8
+|   |   |   |   |   |   |   TSH <= 0.32: sick (13.0)
+|   |   |   |   |   |   |   TSH > 0.32: negative (6.0)
+|   |   |   |   |   |   T3 > 2.8: negative (9.0)
+|   |   |   |   T3_measured = f: negative (17.0)
+|   |   |   on_thyroxine = t: negative (41.0)
+
+Number of Leaves  : 	26
+
+Size of the tree : 	45
+
+
+Time taken to build model: 0.11 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3411               99.1858 %
+Incorrectly Classified Instances        28                0.8142 %
+Kappa statistic                          0.9296
+Mean absolute error                      0.0097
+Root mean squared error                  0.0871
+Relative absolute error                  8.2026 %
+Root relative squared error             35.9142 %
+Total Number of Instances             3439     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.997    0.083    0.994      0.997    0.996      0.930    0.978     0.997     negative
+                 0.917    0.003    0.952      0.917    0.934      0.930    0.978     0.928     sick
+Weighted Avg.    0.992    0.078    0.992      0.992    0.992      0.930    0.978     0.993     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3213   10 |    a = negative
+   18  198 |    b = sick
+

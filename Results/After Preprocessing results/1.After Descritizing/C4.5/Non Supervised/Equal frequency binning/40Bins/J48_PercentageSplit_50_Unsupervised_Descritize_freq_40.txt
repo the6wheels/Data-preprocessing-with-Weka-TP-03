@@ -1,0 +1,91 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.Discretize-D-F-B40-M-1.0-Rfirst-last-precision6
+Instances:    3772
+Attributes:   258
+              [list of attributes omitted]
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+T3_4 = '(-inf-1.15]'
+|   T3_measured = t
+|   |   TT4_1 = '(-inf-46.5]'
+|   |   |   TSH_38 = '(-inf-12.55]'
+|   |   |   |   T4U_1 = '(-inf-0.685]': negative (7.64/1.0)
+|   |   |   |   T4U_1 = '(0.685-inf)': sick (4.36/0.36)
+|   |   |   TSH_38 = '(12.55-inf)': negative (47.0/1.0)
+|   |   TT4_1 = '(46.5-inf)'
+|   |   |   referral_source = SVHC: sick (9.0)
+|   |   |   referral_source = other
+|   |   |   |   sick = f
+|   |   |   |   |   age_33 = '(-inf-70.5]'
+|   |   |   |   |   |   TSH_34 = '(-inf-4.05]': negative (26.4/1.0)
+|   |   |   |   |   |   TSH_34 = '(4.05-inf)': sick (6.6/1.6)
+|   |   |   |   |   age_33 = '(70.5-inf)'
+|   |   |   |   |   |   FTI_2 = '(-inf-68.5]': negative (2.12)
+|   |   |   |   |   |   FTI_2 = '(68.5-inf)': sick (15.88/2.88)
+|   |   |   |   sick = t: sick (3.0)
+|   |   |   referral_source = SVI
+|   |   |   |   FTI_37 = '(-inf-153.5]'
+|   |   |   |   |   TSH_38 = '(-inf-12.55]': sick (163.32/3.0)
+|   |   |   |   |   TSH_38 = '(12.55-inf)': negative (8.05/2.05)
+|   |   |   |   FTI_37 = '(153.5-inf)'
+|   |   |   |   |   TT4_20 = '(-inf-104.5]': sick (3.31/1.0)
+|   |   |   |   |   TT4_20 = '(104.5-inf)': negative (11.31/1.31)
+|   |   |   referral_source = STMW: sick (0.0)
+|   |   |   referral_source = SVHD: sick (3.0)
+|   T3_measured = f: negative (79.64/0.31)
+T3_4 = '(1.15-inf)'
+|   FTI_38 = '(-inf-165.5]': negative (3203.91/8.69)
+|   FTI_38 = '(165.5-inf)'
+|   |   T3_19 = '(-inf-2.65]'
+|   |   |   on_thyroxine = f
+|   |   |   |   TT4_36 = '(-inf-150.5]': negative (19.73)
+|   |   |   |   TT4_36 = '(150.5-inf)'
+|   |   |   |   |   T3_measured = t
+|   |   |   |   |   |   TSH_8 = '(-inf-0.285]': sick (17.55/1.55)
+|   |   |   |   |   |   TSH_8 = '(0.285-inf)': negative (7.37)
+|   |   |   |   |   T3_measured = f: negative (8.36)
+|   |   |   on_thyroxine = t: negative (30.19)
+|   |   T3_19 = '(2.65-inf)': negative (94.24)
+
+Number of Leaves  : 	23
+
+Size of the tree : 	42
+
+
+Time taken to build model: 0.31 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.02 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1863               98.7805 %
+Incorrectly Classified Instances        23                1.2195 %
+Kappa statistic                          0.8846
+Mean absolute error                      0.0201
+Root mean squared error                  0.1079
+Relative absolute error                 17.4049 %
+Root relative squared error             44.7451 %
+Total Number of Instances             1886     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.197    0.987      1.000    0.994      0.891    0.924     0.989     negative
+                 0.803    0.000    1.000      0.803    0.891      0.891    0.924     0.868     sick
+Weighted Avg.    0.988    0.184    0.988      0.988    0.987      0.891    0.924     0.981     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1769    0 |    a = negative
+   23   94 |    b = sick
+

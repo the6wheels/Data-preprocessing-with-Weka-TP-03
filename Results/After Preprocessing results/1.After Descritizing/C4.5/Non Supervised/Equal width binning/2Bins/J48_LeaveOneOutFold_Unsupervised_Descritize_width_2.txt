@@ -1,0 +1,76 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.Discretize-D-B2-M-1.0-Rfirst-last-precision6
+Instances:    3772
+Attributes:   30
+              age_1
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH_1
+              T3_measured
+              T3_1
+              TT4_measured
+              TT4_1
+              T4U_measured
+              T4U_1
+              FTI_measured
+              FTI_1
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    3772-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+: negative (3772.0/231.0)
+
+Number of Leaves  : 	1
+
+Size of the tree : 	1
+
+
+Time taken to build model: 0.09 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3541               93.8759 %
+Incorrectly Classified Instances       231                6.1241 %
+Kappa statistic                          0     
+Mean absolute error                      0.115 
+Root mean squared error                  0.2398
+Relative absolute error                 99.8229 %
+Root relative squared error            100      %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.939      1.000    0.968      ?        0.000     0.939     negative
+                 0.000    0.000    ?          0.000    ?          ?        0.000     0.061     sick
+Weighted Avg.    0.939    0.939    ?          0.939    ?          ?        0.000     0.885     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3541    0 |    a = negative
+  231    0 |    b = sick
+

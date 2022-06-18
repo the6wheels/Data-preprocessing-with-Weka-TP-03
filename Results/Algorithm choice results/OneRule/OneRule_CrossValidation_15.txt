@@ -1,0 +1,77 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.OneR -B 6
+Relation:     sick
+Instances:    3772
+Attributes:   30
+              age
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              FTI_measured
+              FTI
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    15-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+T3:
+	< 0.25	-> negative
+	< 0.35	-> sick
+	< 0.55	-> negative
+	< 1.15	-> sick
+	>= 1.15	-> negative
+	?	-> negative
+(3644/3772 instances correct)
+
+
+Time taken to build model: 0.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3636               96.3945 %
+Incorrectly Classified Instances       136                3.6055 %
+Kappa statistic                          0.7055
+Mean absolute error                      0.0361
+Root mean squared error                  0.1899
+Relative absolute error                 31.298  %
+Root relative squared error             79.1925 %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.976    0.225    0.985      0.976    0.981      0.707    0.876     0.984     negative
+                 0.775    0.024    0.681      0.775    0.725      0.707    0.876     0.541     sick
+Weighted Avg.    0.964    0.213    0.967      0.964    0.965      0.707    0.876     0.957     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3457   84 |    a = negative
+   52  179 |    b = sick
+

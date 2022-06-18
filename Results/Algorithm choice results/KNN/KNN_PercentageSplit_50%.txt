@@ -1,0 +1,74 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 3 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     sick
+Instances:    3772
+Attributes:   30
+              age
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              FTI_measured
+              FTI
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 3 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 1.14 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1803               95.5992 %
+Incorrectly Classified Instances        83                4.4008 %
+Kappa statistic                          0.4838
+Mean absolute error                      0.0565
+Root mean squared error                  0.1919
+Relative absolute error                 48.9959 %
+Root relative squared error             79.5412 %
+Total Number of Instances             1886     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.995    0.641    0.959      0.995    0.977      0.532    0.833     0.979     negative
+                 0.359    0.005    0.840      0.359    0.503      0.532    0.833     0.497     sick
+Weighted Avg.    0.956    0.602    0.952      0.956    0.948      0.532    0.833     0.949     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1761    8 |    a = negative
+   75   42 |    b = sick
+

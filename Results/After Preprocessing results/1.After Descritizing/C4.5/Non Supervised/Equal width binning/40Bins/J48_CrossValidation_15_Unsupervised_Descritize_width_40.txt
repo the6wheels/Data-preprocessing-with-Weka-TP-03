@@ -1,0 +1,100 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.Discretize-D-B40-M-1.0-Rfirst-last-precision6
+Instances:    3772
+Attributes:   258
+              [list of attributes omitted]
+Test mode:    15-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+T3_4 = '(-inf-1.105]'
+|   T3_measured = t
+|   |   TT4_3 = '(-inf-34.1]': negative (42.0/1.0)
+|   |   TT4_3 = '(34.1-inf)'
+|   |   |   TT4_5 = '(-inf-55.5]'
+|   |   |   |   TSH_2 = '(-inf-26.50475]'
+|   |   |   |   |   FTI_8 = '(-inf-80.6]'
+|   |   |   |   |   |   age_4 = '(-inf-46.4]': sick (5.0)
+|   |   |   |   |   |   age_4 = '(46.4-inf)'
+|   |   |   |   |   |   |   sex = F: negative (10.0/1.0)
+|   |   |   |   |   |   |   sex = M: sick (6.0/1.0)
+|   |   |   |   |   FTI_8 = '(80.6-inf)': negative (7.0)
+|   |   |   |   TSH_2 = '(26.50475-inf)': negative (7.0)
+|   |   |   TT4_5 = '(55.5-inf)'
+|   |   |   |   referral_source = SVHC: sick (9.0)
+|   |   |   |   referral_source = other
+|   |   |   |   |   sick = f
+|   |   |   |   |   |   T4U_measured = t
+|   |   |   |   |   |   |   T4U_6 = '(-inf-0.5605]': sick (3.0)
+|   |   |   |   |   |   |   T4U_6 = '(0.5605-inf)'
+|   |   |   |   |   |   |   |   T4U_9 = '(-inf-0.71575]': negative (3.0)
+|   |   |   |   |   |   |   |   T4U_9 = '(0.71575-inf)'
+|   |   |   |   |   |   |   |   |   age_6 = '(-inf-69.1]'
+|   |   |   |   |   |   |   |   |   |   TSH_1 = '(-inf-13.254875]': negative (16.73)
+|   |   |   |   |   |   |   |   |   |   TSH_1 = '(13.254875-inf)': sick (6.27/1.27)
+|   |   |   |   |   |   |   |   |   age_6 = '(69.1-inf)'
+|   |   |   |   |   |   |   |   |   |   on_thyroxine = f: sick (13.0/2.0)
+|   |   |   |   |   |   |   |   |   |   on_thyroxine = t: negative (2.0)
+|   |   |   |   |   |   T4U_measured = f: negative (3.0)
+|   |   |   |   |   sick = t: sick (3.0)
+|   |   |   |   referral_source = SVI
+|   |   |   |   |   FTI_16 = '(-inf-159.2]'
+|   |   |   |   |   |   FTI_6 = '(-inf-60.95]': negative (2.1/0.1)
+|   |   |   |   |   |   FTI_6 = '(60.95-inf)': sick (157.32)
+|   |   |   |   |   FTI_16 = '(159.2-inf)'
+|   |   |   |   |   |   TT4_9 = '(-inf-98.3]': sick (2.15)
+|   |   |   |   |   |   TT4_9 = '(98.3-inf)': negative (10.44/0.44)
+|   |   |   |   referral_source = STMW: sick (0.0)
+|   |   |   |   referral_source = SVHD: sick (3.0)
+|   T3_measured = f: negative (79.64/0.31)
+T3_4 = '(1.105-inf)'
+|   FTI_17 = '(-inf-169.025]': negative (3222.3/8.69)
+|   FTI_17 = '(169.025-inf)'
+|   |   T3_10 = '(-inf-2.6875]'
+|   |   |   on_thyroxine = f
+|   |   |   |   T3_measured = t
+|   |   |   |   |   TT4_14 = '(-inf-151.8]': negative (11.57)
+|   |   |   |   |   TT4_14 = '(151.8-inf)'
+|   |   |   |   |   |   TT4_18 = '(-inf-194.6]': sick (20.78/4.78)
+|   |   |   |   |   |   TT4_18 = '(194.6-inf)': negative (3.09)
+|   |   |   |   T3_measured = f: negative (11.21)
+|   |   |   on_thyroxine = t: negative (25.63)
+|   |   T3_10 = '(2.6875-inf)': negative (86.77)
+
+Number of Leaves  : 	29
+
+Size of the tree : 	54
+
+
+Time taken to build model: 0.34 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3731               98.913  %
+Incorrectly Classified Instances        41                1.087  %
+Kappa statistic                          0.9049
+Mean absolute error                      0.0156
+Root mean squared error                  0.0982
+Relative absolute error                 13.5431 %
+Root relative squared error             40.9417 %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.995    0.095    0.994      0.995    0.994      0.905    0.943     0.989     negative
+                 0.905    0.005    0.917      0.905    0.911      0.905    0.943     0.918     sick
+Weighted Avg.    0.989    0.090    0.989      0.989    0.989      0.905    0.943     0.985     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3522   19 |    a = negative
+   22  209 |    b = sick
+

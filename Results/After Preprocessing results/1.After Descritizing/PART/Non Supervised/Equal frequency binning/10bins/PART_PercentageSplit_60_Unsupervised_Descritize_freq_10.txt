@@ -1,0 +1,326 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.Discretize-D-F-B10-M-1.0-Rfirst-last-precision6
+Instances:    3772
+Attributes:   78
+              age_1
+              age_2
+              age_3
+              age_4
+              age_5
+              age_6
+              age_7
+              age_8
+              age_9
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH_1
+              TSH_2
+              TSH_3
+              TSH_4
+              TSH_5
+              TSH_6
+              TSH_7
+              TSH_8
+              TSH_9
+              T3_measured
+              T3_1
+              T3_2
+              T3_3
+              T3_4
+              T3_5
+              T3_6
+              T3_7
+              T3_8
+              T3_9
+              TT4_measured
+              TT4_1
+              TT4_2
+              TT4_3
+              TT4_4
+              TT4_5
+              TT4_6
+              TT4_7
+              TT4_8
+              TT4_9
+              T4U_measured
+              T4U_1
+              T4U_2
+              T4U_3
+              T4U_4
+              T4U_5
+              T4U_6
+              T4U_7
+              T4U_8
+              T4U_9
+              FTI_measured
+              FTI_1
+              FTI_2
+              FTI_3
+              FTI_4
+              FTI_5
+              FTI_6
+              FTI_7
+              FTI_8
+              FTI_9
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    split 60.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+T3_1 = '(1.15-inf)' AND
+TT4_9 = '(-inf-149.5]' AND
+TT4_1 = '(72.5-inf)': negative (2774.73)
+
+T3_1 = '(1.15-inf)' AND
+referral_source = other AND
+FTI_9 = '(-inf-147.5]': negative (247.45/0.6)
+
+T3_1 = '(1.15-inf)' AND
+on_thyroxine = f AND
+T3_9 = '(-inf-2.85]' AND
+TSH_2 = '(0.285-inf)': negative (131.1/4.7)
+
+referral_source = other AND
+age_9 = '(-inf-75.5]' AND
+T3_measured = f: negative (98.87/0.28)
+
+TT4_9 = '(149.5-inf)' AND
+T3_9 = '(2.85-inf)': negative (112.69)
+
+referral_source = other AND
+sick = f AND
+age_9 = '(-inf-75.5]' AND
+T4U_7 = '(1.055-inf)': negative (28.34)
+
+T3_measured = t AND
+T3_4 = '(1.85-inf)' AND
+on_thyroxine = t: negative (21.66)
+
+T3_measured = t AND
+T3_9 = '(-inf-2.85]' AND
+TT4_1 = '(72.5-inf)' AND
+TT4_9 = '(-inf-149.5]' AND
+TSH_measured = t AND
+referral_source = SVI AND
+FTI_9 = '(-inf-147.5]': sick (121.15/1.0)
+
+T3_measured = f: negative (13.53/1.41)
+
+T3_9 = '(-inf-2.85]' AND
+sick = t AND
+T3_1 = '(-inf-1.15]': sick (12.0)
+
+T3_9 = '(-inf-2.85]' AND
+sick = f AND
+T4U_measured = t AND
+T4U_8 = '(-inf-1.115]' AND
+T4U_4 = '(0.935-inf)' AND
+age_1 = '(25.5-inf)' AND
+age_8 = '(-inf-70.5]' AND
+age_6 = '(59.5-inf)': negative (12.0)
+
+T3_9 = '(-inf-2.85]' AND
+sick = f AND
+T4U_measured = t AND
+T4U_8 = '(-inf-1.115]' AND
+psych = f AND
+TSH_9 = '(6.15-inf)' AND
+TT4_1 = '(-inf-72.5]' AND
+on_thyroxine = f: negative (34.83/5.55)
+
+T3_9 = '(-inf-2.85]' AND
+sick = f AND
+T4U_measured = t AND
+T4U_8 = '(-inf-1.115]' AND
+psych = f AND
+TSH_measured = t AND
+TSH_8 = '(3.05-inf)' AND
+age_5 = '(54.5-inf)' AND
+on_thyroxine = f: sick (12.0/2.0)
+
+T3_9 = '(-inf-2.85]' AND
+sick = f AND
+T4U_measured = f: negative (10.83/0.85)
+
+T3_9 = '(-inf-2.85]' AND
+T4U_8 = '(1.115-inf)': negative (7.0)
+
+T3_9 = '(-inf-2.85]' AND
+sick = f AND
+psych = f AND
+TSH_measured = t AND
+query_hyperthyroid = f AND
+on_thyroxine = t AND
+age_5 = '(54.5-inf)' AND
+TSH_3 = '(-inf-0.655]': negative (6.0)
+
+T3_9 = '(-inf-2.85]' AND
+sick = f AND
+psych = f AND
+TSH_measured = t AND
+query_hyperthyroid = f AND
+T4U_4 = '(-inf-0.935]' AND
+T3_6 = '(-inf-2.05]' AND
+T3_4 = '(-inf-1.85]' AND
+T3_1 = '(-inf-1.15]' AND
+age_1 = '(25.5-inf)' AND
+TSH_1 = '(0.085-inf)' AND
+TT4_8 = '(-inf-130.5]' AND
+age_7 = '(64.5-inf)' AND
+TSH_3 = '(0.655-inf)' AND
+FTI_1 = '(78.5-inf)': sick (20.0)
+
+T3_9 = '(-inf-2.85]' AND
+sick = f AND
+psych = f AND
+T4U_1 = '(0.785-inf)' AND
+TSH_8 = '(-inf-3.05]' AND
+query_hyperthyroid = f AND
+T4U_3 = '(-inf-0.895]' AND
+TT4_9 = '(-inf-149.5]' AND
+FTI_1 = '(78.5-inf)': negative (10.0/3.0)
+
+T3_9 = '(-inf-2.85]' AND
+sick = f AND
+psych = f AND
+T4U_1 = '(0.785-inf)' AND
+T4U_3 = '(-inf-0.895]': sick (20.72)
+
+T3_7 = '(2.25-inf)': negative (6.39)
+
+psych = f AND
+sick = f AND
+TSH_measured = t AND
+query_hyperthyroid = f AND
+T4U_7 = '(-inf-1.055]' AND
+T3_2 = '(-inf-1.47]' AND
+TT4_7 = '(-inf-119.5]' AND
+FTI_7 = '(120.5-inf)' AND
+TSH_2 = '(-inf-0.285]': negative (4.0)
+
+psych = f AND
+sick = f AND
+TSH_measured = t AND
+query_hyperthyroid = f AND
+TSH_3 = '(0.655-inf)' AND
+query_hypothyroid = f AND
+on_thyroxine = f AND
+TT4_4 = '(-inf-96.5]' AND
+age_1 = '(25.5-inf)' AND
+age_4 = '(-inf-47.5]': negative (5.0/1.0)
+
+psych = f AND
+sick = f AND
+TSH_measured = t AND
+query_hyperthyroid = f AND
+TSH_3 = '(0.655-inf)' AND
+FTI_6 = '(-inf-113.5]' AND
+query_hypothyroid = f AND
+on_thyroxine = f AND
+age_4 = '(47.5-inf)' AND
+T4U_1 = '(-inf-0.785]' AND
+FTI_1 = '(-inf-78.5]': negative (5.0/1.0)
+
+sick = f AND
+psych = f AND
+TSH_measured = t AND
+query_hyperthyroid = f AND
+TSH_1 = '(-inf-0.085]' AND
+age_9 = '(-inf-75.5]' AND
+referral_source = SVI AND
+T4U_1 = '(0.785-inf)': negative (4.0)
+
+sick = f AND
+T3_5 = '(-inf-1.95]' AND
+psych = f AND
+TSH_measured = t AND
+query_hyperthyroid = f AND
+age_6 = '(-inf-59.5]' AND
+FTI_2 = '(-inf-89.5]': sick (7.0)
+
+T3_5 = '(-inf-1.95]' AND
+psych = f AND
+T4U_6 = '(-inf-1.015]' AND
+query_on_thyroxine = f AND
+sick = f AND
+T3_1 = '(1.15-inf)': sick (6.0/1.0)
+
+T3_5 = '(-inf-1.95]' AND
+psych = f AND
+T3_1 = '(1.15-inf)': negative (4.26)
+
+T3_1 = '(-inf-1.15]' AND
+psych = f AND
+age_9 = '(75.5-inf)' AND
+T4U_4 = '(0.935-inf)': negative (3.0/1.0)
+
+TT4_8 = '(-inf-130.5]' AND
+age_9 = '(-inf-75.5]' AND
+psych = f AND
+referral_source = other: negative (9.72/1.0)
+
+T4U_1 = '(-inf-0.785]' AND
+TSH_2 = '(0.285-inf)' AND
+FTI_3 = '(95.5-inf)': sick (7.5/3.0)
+
+T4U_1 = '(0.785-inf)': sick (6.0)
+
+TSH_2 = '(-inf-0.285]': sick (5.13/1.0)
+
+: negative (4.1/1.1)
+
+Number of Rules  : 	33
+
+
+Time taken to build model: 0.22 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1468               97.283  %
+Incorrectly Classified Instances        41                2.717  %
+Kappa statistic                          0.7513
+Mean absolute error                      0.0303
+Root mean squared error                  0.1519
+Relative absolute error                 26.4365 %
+Root relative squared error             64.4699 %
+Total Number of Instances             1509     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.987    0.247    0.985      0.987    0.986      0.751    0.940     0.993     negative
+                 0.753    0.013    0.779      0.753    0.766      0.751    0.940     0.761     sick
+Weighted Avg.    0.973    0.233    0.972      0.973    0.973      0.751    0.940     0.979     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1401   19 |    a = negative
+   22   67 |    b = sick
+

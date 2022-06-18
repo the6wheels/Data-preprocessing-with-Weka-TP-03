@@ -1,0 +1,721 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.Discretize-D-F-B5-M-1.0-Rfirst-last-precision6
+Instances:    3772
+Attributes:   48
+              age_1
+              age_2
+              age_3
+              age_4
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH_1
+              TSH_2
+              TSH_3
+              TSH_4
+              T3_measured
+              T3_1
+              T3_2
+              T3_3
+              T3_4
+              TT4_measured
+              TT4_1
+              TT4_2
+              TT4_3
+              TT4_4
+              T4U_measured
+              T4U_1
+              T4U_2
+              T4U_3
+              T4U_4
+              FTI_measured
+              FTI_1
+              FTI_2
+              FTI_3
+              FTI_4
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+T3_1 = '(1.47-inf)' AND
+FTI_4 = '(-inf-129.5]': negative (2417.11/4.41)
+
+referral_source = other AND
+T3_measured = f: negative (265.4/0.2)
+
+T3_1 = '(1.47-inf)' AND
+TSH_1 = '(0.295-inf)': negative (230.71/0.17)
+
+referral_source = other AND
+sick = f AND
+age_4 = '(-inf-70.5]' AND
+T4U_4 = '(-inf-1.115]' AND
+TSH_measured = t AND
+T4U_measured = t AND
+FTI_2 = '(101.5-inf)' AND
+TSH_4 = '(-inf-3.15]' AND
+on_thyroxine = t: negative (54.0)
+
+referral_source = other AND
+T4U_3 = '(1.015-inf)': negative (94.38/1.0)
+
+T3_2 = '(1.85-inf)' AND
+TT4_4 = '(131.5-inf)' AND
+on_thyroxine = f AND
+referral_source = other AND
+T3_3 = '(2.15-inf)': negative (43.09/2.0)
+
+T3_measured = t AND
+T3_4 = '(2.45-inf)' AND
+T4U_1 = '(0.855-inf)': negative (24.96)
+
+T3_measured = t AND
+thyroid_surgery = f AND
+T3_2 = '(1.85-inf)' AND
+TT4_4 = '(-inf-131.5]': negative (25.09)
+
+T3_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+thyroid_surgery = f AND
+referral_source = other AND
+T4U_measured = t AND
+age_4 = '(-inf-70.5]' AND
+TT4_4 = '(-inf-131.5]' AND
+on_thyroxine = f AND
+T4U_1 = '(0.855-inf)': negative (39.0)
+
+T3_measured = f: negative (17.78/0.22)
+
+T3_4 = '(-inf-2.45]' AND
+thyroid_surgery = f AND
+T3_1 = '(1.47-inf)' AND
+on_thyroxine = f AND
+TT4_4 = '(131.5-inf)' AND
+age_1 = '(32.5-inf)' AND
+sex = F AND
+T4U_2 = '(0.935-inf)': negative (12.57/2.73)
+
+T3_4 = '(-inf-2.45]' AND
+thyroid_surgery = f AND
+T3_1 = '(1.47-inf)' AND
+on_thyroxine = t: negative (11.53)
+
+T3_4 = '(-inf-2.45]' AND
+thyroid_surgery = f AND
+TT4_measured = t AND
+sick = t AND
+query_hypothyroid = f AND
+T4U_3 = '(-inf-1.015]' AND
+T4U_1 = '(-inf-0.855]' AND
+FTI_4 = '(-inf-129.5]': sick (14.46/1.46)
+
+T3_4 = '(-inf-2.45]' AND
+thyroid_surgery = f AND
+TT4_measured = t AND
+query_hypothyroid = f AND
+referral_source = SVHC AND
+FTI_3 = '(113.5-inf)': negative (17.21)
+
+T3_4 = '(-inf-2.45]' AND
+thyroid_surgery = f AND
+TT4_measured = t AND
+query_hypothyroid = f AND
+T4U_2 = '(0.935-inf)' AND
+age_1 = '(32.5-inf)' AND
+query_on_thyroxine = f AND
+age_2 = '(47.5-inf)' AND
+T3_1 = '(-inf-1.47]' AND
+age_3 = '(59.5-inf)' AND
+on_thyroxine = f AND
+referral_source = SVI AND
+TT4_4 = '(-inf-131.5]' AND
+FTI_3 = '(-inf-113.5]' AND
+TSH_4 = '(3.15-inf)': negative (15.53/1.0)
+
+T3_4 = '(-inf-2.45]' AND
+thyroid_surgery = f AND
+TT4_measured = t AND
+query_hypothyroid = f AND
+referral_source = other AND
+T4U_measured = t AND
+T3_2 = '(-inf-1.85]' AND
+sex = M AND
+age_4 = '(-inf-70.5]': negative (17.61)
+
+thyroid_surgery = f AND
+T3_4 = '(-inf-2.45]' AND
+TT4_measured = t AND
+TT4_4 = '(131.5-inf)' AND
+age_1 = '(32.5-inf)' AND
+on_thyroxine = f AND
+T4U_measured = t AND
+T3_3 = '(-inf-2.15]' AND
+query_on_thyroxine = f AND
+query_hypothyroid = f AND
+sex = M AND
+age_4 = '(-inf-70.5]': negative (8.12)
+
+thyroid_surgery = f AND
+T3_4 = '(-inf-2.45]' AND
+TT4_measured = t AND
+query_hypothyroid = t AND
+sick = f AND
+age_2 = '(47.5-inf)' AND
+TT4_4 = '(-inf-131.5]' AND
+TSH_1 = '(0.295-inf)' AND
+T4U_4 = '(-inf-1.115]' AND
+referral_source = SVI AND
+FTI_4 = '(-inf-129.5]' AND
+FTI_1 = '(89.5-inf)' AND
+TSH_4 = '(-inf-3.15]' AND
+FTI_3 = '(-inf-113.5]': sick (7.0/1.0)
+
+thyroid_surgery = f AND
+T3_4 = '(-inf-2.45]' AND
+TT4_measured = t AND
+T4U_1 = '(0.855-inf)' AND
+query_hyperthyroid = f AND
+T3_2 = '(-inf-1.85]' AND
+age_1 = '(32.5-inf)' AND
+TT4_1 = '(83.5-inf)' AND
+psych = f AND
+query_on_thyroxine = f AND
+referral_source = SVI AND
+T4U_measured = t AND
+TSH_4 = '(-inf-3.15]' AND
+query_hypothyroid = f AND
+FTI_1 = '(89.5-inf)' AND
+T4U_4 = '(-inf-1.115]' AND
+TSH_1 = '(0.295-inf)' AND
+T4U_3 = '(-inf-1.015]' AND
+sick = f AND
+TSH_2 = '(0.995-inf)' AND
+TT4_2 = '(97.5-inf)' AND
+FTI_3 = '(113.5-inf)': negative (23.0/4.0)
+
+thyroid_surgery = f AND
+T3_4 = '(-inf-2.45]' AND
+TT4_measured = t AND
+age_1 = '(-inf-32.5]' AND
+query_hypothyroid = f AND
+T4U_2 = '(-inf-0.935]' AND
+TT4_3 = '(-inf-111.5]': negative (17.19/1.0)
+
+thyroid_surgery = t: negative (6.14)
+
+TT4_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+age_1 = '(-inf-32.5]' AND
+T4U_1 = '(0.855-inf)' AND
+TSH_3 = '(-inf-1.75]' AND
+sex = M: sick (4.38/0.55)
+
+TT4_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+T4U_2 = '(0.935-inf)' AND
+age_1 = '(32.5-inf)' AND
+sick = f AND
+query_on_thyroxine = f AND
+age_2 = '(47.5-inf)' AND
+FTI_4 = '(129.5-inf)': negative (9.84/1.46)
+
+TT4_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+T4U_4 = '(1.115-inf)' AND
+FTI_1 = '(-inf-89.5]': negative (8.4/0.15)
+
+TT4_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+referral_source = other AND
+age_1 = '(32.5-inf)' AND
+T4U_measured = t AND
+TT4_1 = '(83.5-inf)' AND
+on_thyroxine = f AND
+FTI_1 = '(89.5-inf)' AND
+sex = F AND
+TSH_4 = '(-inf-3.15]' AND
+T3_1 = '(-inf-1.47]': negative (12.18/3.0)
+
+TT4_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+TSH_measured = t AND
+query_on_thyroxine = t AND
+TT4_3 = '(111.5-inf)': negative (4.0)
+
+TT4_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+TSH_measured = t AND
+query_hyperthyroid = t AND
+age_2 = '(47.5-inf)' AND
+TT4_2 = '(97.5-inf)': sick (3.95/1.0)
+
+TT4_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+TSH_measured = t AND
+T4U_measured = f AND
+referral_source = SVI AND
+TT4_1 = '(83.5-inf)': sick (6.58/1.68)
+
+TT4_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+T4U_measured = t AND
+TSH_measured = t AND
+T4U_1 = '(-inf-0.855]' AND
+age_1 = '(32.5-inf)' AND
+T3_1 = '(-inf-1.47]' AND
+TT4_4 = '(-inf-131.5]' AND
+query_hyperthyroid = f AND
+FTI_2 = '(101.5-inf)' AND
+TSH_4 = '(3.15-inf)' AND
+age_4 = '(-inf-70.5]': sick (17.0/1.0)
+
+TT4_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+T4U_measured = f: negative (10.61/0.98)
+
+T4U_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+TSH_measured = t AND
+query_hyperthyroid = t AND
+age_2 = '(-inf-47.5]': sick (3.0)
+
+T4U_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+TSH_measured = t AND
+TT4_1 = '(83.5-inf)' AND
+psych = f AND
+FTI_1 = '(-inf-89.5]': negative (6.0/1.0)
+
+T4U_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+TSH_measured = t AND
+TT4_1 = '(83.5-inf)' AND
+psych = f AND
+referral_source = other AND
+age_1 = '(32.5-inf)' AND
+TT4_2 = '(97.5-inf)' AND
+on_thyroxine = f AND
+sex = M: negative (5.0/1.0)
+
+T4U_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+TSH_measured = t AND
+TT4_1 = '(83.5-inf)' AND
+psych = f AND
+referral_source = other AND
+age_1 = '(32.5-inf)' AND
+FTI_4 = '(-inf-129.5]': negative (5.0)
+
+T4U_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+TSH_measured = t AND
+query_on_thyroxine = f AND
+tumor = f AND
+TT4_1 = '(-inf-83.5]' AND
+sick = f AND
+TSH_4 = '(-inf-3.15]' AND
+query_hypothyroid = f AND
+on_thyroxine = f AND
+TSH_2 = '(0.995-inf)' AND
+FTI_2 = '(101.5-inf)': sick (8.0)
+
+T4U_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+TSH_measured = t AND
+psych = t: negative (7.0/2.0)
+
+T4U_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+TSH_measured = t AND
+referral_source = SVHC AND
+age_2 = '(47.5-inf)': sick (6.0)
+
+T4U_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+query_hyperthyroid = f AND
+TSH_measured = t AND
+referral_source = other AND
+age_1 = '(32.5-inf)' AND
+TSH_2 = '(-inf-0.995]' AND
+FTI_2 = '(101.5-inf)' AND
+T3_1 = '(-inf-1.47]': negative (3.6/1.0)
+
+T4U_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+query_hyperthyroid = f AND
+TSH_measured = t AND
+referral_source = other AND
+age_1 = '(32.5-inf)' AND
+FTI_2 = '(-inf-101.5]' AND
+TSH_1 = '(0.295-inf)' AND
+query_hypothyroid = f AND
+T4U_1 = '(0.855-inf)': sick (7.0/1.0)
+
+T4U_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+query_hyperthyroid = f AND
+TSH_measured = t AND
+referral_source = other AND
+FTI_2 = '(-inf-101.5]': negative (8.6/1.0)
+
+T4U_measured = t AND
+T3_4 = '(-inf-2.45]' AND
+query_hyperthyroid = f AND
+referral_source = other: sick (8.25/1.25)
+
+referral_source = SVI AND
+tumor = f AND
+T3_4 = '(-inf-2.45]' AND
+query_hyperthyroid = f AND
+on_thyroxine = t AND
+age_4 = '(70.5-inf)': negative (4.0)
+
+referral_source = SVI AND
+tumor = f AND
+T3_4 = '(-inf-2.45]' AND
+query_hyperthyroid = f AND
+T3_1 = '(1.47-inf)' AND
+TT4_4 = '(-inf-131.5]': negative (4.0)
+
+referral_source = SVI AND
+tumor = f AND
+T3_4 = '(-inf-2.45]' AND
+query_hyperthyroid = f AND
+TSH_1 = '(-inf-0.295]' AND
+T4U_2 = '(-inf-0.935]' AND
+query_on_thyroxine = f AND
+FTI_4 = '(-inf-129.5]' AND
+age_2 = '(47.5-inf)' AND
+FTI_3 = '(113.5-inf)': sick (11.0/1.0)
+
+referral_source = SVI AND
+tumor = f AND
+T3_4 = '(-inf-2.45]' AND
+query_hyperthyroid = f AND
+on_thyroxine = f AND
+query_on_thyroxine = f AND
+T3_3 = '(-inf-2.15]' AND
+TT4_1 = '(83.5-inf)' AND
+age_2 = '(-inf-47.5]' AND
+FTI_2 = '(101.5-inf)' AND
+TSH_3 = '(-inf-1.75]': negative (8.0/2.0)
+
+referral_source = SVI AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_4 = '(-inf-2.45]' AND
+query_hyperthyroid = f AND
+on_thyroxine = f AND
+query_on_thyroxine = f AND
+T3_3 = '(-inf-2.15]' AND
+T3_1 = '(-inf-1.47]' AND
+TT4_1 = '(83.5-inf)' AND
+age_2 = '(47.5-inf)' AND
+TSH_3 = '(1.75-inf)' AND
+sick = f AND
+TSH_4 = '(-inf-3.15]' AND
+FTI_2 = '(101.5-inf)' AND
+query_hypothyroid = f AND
+TT4_3 = '(-inf-111.5]' AND
+age_4 = '(-inf-70.5]': negative (8.0/1.0)
+
+referral_source = SVI AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_4 = '(-inf-2.45]' AND
+query_hyperthyroid = f AND
+on_thyroxine = f AND
+query_on_thyroxine = f AND
+T3_3 = '(-inf-2.15]' AND
+T3_1 = '(1.47-inf)': negative (4.0/1.0)
+
+referral_source = SVHC: negative (3.0)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_4 = '(-inf-2.45]' AND
+query_hyperthyroid = f AND
+referral_source = SVI AND
+on_thyroxine = f AND
+query_on_thyroxine = f AND
+T3_1 = '(-inf-1.47]' AND
+TT4_4 = '(131.5-inf)' AND
+sex = F: negative (3.0)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_4 = '(-inf-2.45]' AND
+query_hyperthyroid = f AND
+referral_source = SVI AND
+TT4_4 = '(131.5-inf)': sick (6.0/2.0)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+query_hyperthyroid = f AND
+referral_source = SVI AND
+on_thyroxine = f AND
+query_on_thyroxine = f AND
+TT4_1 = '(83.5-inf)' AND
+age_2 = '(-inf-47.5]': negative (5.0)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+query_hyperthyroid = f AND
+referral_source = SVI AND
+age_2 = '(-inf-47.5]' AND
+T4U_2 = '(-inf-0.935]': sick (11.0/1.0)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+referral_source = SVI AND
+query_hyperthyroid = f AND
+age_2 = '(47.5-inf)' AND
+T4U_1 = '(0.855-inf)' AND
+TSH_1 = '(0.295-inf)' AND
+TT4_3 = '(111.5-inf)' AND
+age_3 = '(59.5-inf)': negative (9.0/1.0)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+query_hyperthyroid = f AND
+referral_source = SVI AND
+T4U_3 = '(1.015-inf)' AND
+age_4 = '(-inf-70.5]' AND
+age_3 = '(-inf-59.5]': sick (8.0/2.0)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+query_hyperthyroid = f AND
+referral_source = SVI AND
+T4U_1 = '(0.855-inf)' AND
+age_3 = '(-inf-59.5]': negative (12.0/2.0)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+query_hyperthyroid = f AND
+referral_source = SVI AND
+TSH_4 = '(3.15-inf)' AND
+FTI_3 = '(-inf-113.5]' AND
+TT4_2 = '(-inf-97.5]' AND
+T4U_2 = '(-inf-0.935]' AND
+FTI_1 = '(-inf-89.5]': negative (22.0/6.0)
+
+T4U_measured = t AND
+referral_source = SVI AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+query_hyperthyroid = f AND
+TT4_1 = '(-inf-83.5]' AND
+query_hypothyroid = f AND
+sex = M AND
+TSH_4 = '(-inf-3.15]': sick (20.47/4.47)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+query_hyperthyroid = f AND
+referral_source = SVI AND
+TT4_2 = '(97.5-inf)' AND
+age_3 = '(59.5-inf)' AND
+query_hypothyroid = f AND
+TSH_2 = '(0.995-inf)' AND
+T4U_3 = '(-inf-1.015]' AND
+sex = F AND
+FTI_4 = '(-inf-129.5]': sick (6.56)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+referral_source = SVI AND
+query_hyperthyroid = f AND
+query_hypothyroid = t AND
+TT4_1 = '(-inf-83.5]': sick (4.0)
+
+referral_source = SVI AND
+age_1 = '(32.5-inf)' AND
+TT4_4 = '(-inf-131.5]' AND
+tumor = f AND
+query_hyperthyroid = f AND
+query_hypothyroid = f AND
+FTI_1 = '(-inf-89.5]' AND
+age_3 = '(59.5-inf)': negative (7.0/1.0)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+referral_source = SVI AND
+query_hyperthyroid = f AND
+query_hypothyroid = f AND
+FTI_1 = '(89.5-inf)' AND
+FTI_4 = '(129.5-inf)' AND
+age_3 = '(59.5-inf)' AND
+age_4 = '(70.5-inf)' AND
+sick = f AND
+TSH_4 = '(-inf-3.15]' AND
+TSH_1 = '(0.295-inf)': sick (9.0/3.0)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+referral_source = SVI AND
+query_hyperthyroid = f AND
+query_hypothyroid = f AND
+FTI_1 = '(89.5-inf)' AND
+age_4 = '(70.5-inf)' AND
+T4U_3 = '(-inf-1.015]' AND
+sick = f AND
+sex = M AND
+T4U_1 = '(0.855-inf)': negative (10.0/2.0)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+query_hyperthyroid = f AND
+referral_source = SVI AND
+query_hypothyroid = f AND
+FTI_1 = '(89.5-inf)' AND
+FTI_3 = '(113.5-inf)' AND
+T4U_1 = '(-inf-0.855]' AND
+age_4 = '(-inf-70.5]' AND
+TSH_1 = '(0.295-inf)': negative (5.98/2.44)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+query_hyperthyroid = f AND
+referral_source = SVI AND
+query_hypothyroid = f AND
+age_3 = '(59.5-inf)' AND
+FTI_3 = '(113.5-inf)' AND
+age_4 = '(70.5-inf)' AND
+sick = f AND
+TSH_4 = '(-inf-3.15]': negative (10.0/3.0)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+query_hyperthyroid = f AND
+referral_source = SVI AND
+query_hypothyroid = f AND
+FTI_4 = '(129.5-inf)' AND
+age_4 = '(-inf-70.5]': sick (4.0)
+
+T4U_measured = t AND
+age_1 = '(32.5-inf)' AND
+tumor = f AND
+T3_1 = '(-inf-1.47]' AND
+query_hyperthyroid = f AND
+referral_source = SVI AND
+query_hypothyroid = f AND
+sick = t AND
+age_4 = '(70.5-inf)': negative (4.0)
+
+T4U_measured = t AND
+TT4_3 = '(-inf-111.5]' AND
+query_hyperthyroid = f AND
+sex = M AND
+query_hypothyroid = f AND
+FTI_2 = '(101.5-inf)': sick (9.26/2.26)
+
+T4U_measured = t AND
+TT4_3 = '(111.5-inf)': sick (7.0)
+
+query_hyperthyroid = f AND
+age_4 = '(-inf-70.5]' AND
+TT4_2 = '(-inf-97.5]' AND
+sex = F AND
+FTI_2 = '(-inf-101.5]': sick (9.81/2.81)
+
+age_4 = '(-inf-70.5]': negative (14.6/1.0)
+
+sex = F AND
+FTI_3 = '(-inf-113.5]' AND
+TT4_2 = '(-inf-97.5]' AND
+TSH_2 = '(-inf-0.995]': sick (4.25/1.01)
+
+sex = F AND
+T4U_3 = '(-inf-1.015]' AND
+FTI_3 = '(-inf-113.5]' AND
+TT4_1 = '(83.5-inf)' AND
+TSH_4 = '(-inf-3.15]': negative (4.01)
+
+T4U_1 = '(0.855-inf)': sick (8.02/0.02)
+
+TT4_1 = '(-inf-83.5]': sick (6.78/2.01)
+
+: negative (3.01)
+
+Number of Rules  : 	75
+
+
+Time taken to build model: 0.3 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3531               93.6108 %
+Incorrectly Classified Instances       241                6.3892 %
+Kappa statistic                          0.4046
+Mean absolute error                      0.0681
+Root mean squared error                  0.2199
+Relative absolute error                 59.1221 %
+Root relative squared error             91.7194 %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.971    0.593    0.962      0.971    0.966      0.406    0.894     0.982     negative
+                 0.407    0.029    0.475      0.407    0.438      0.406    0.894     0.436     sick
+Weighted Avg.    0.936    0.559    0.932      0.936    0.934      0.406    0.894     0.948     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3437  104 |    a = negative
+  137   94 |    b = sick
+

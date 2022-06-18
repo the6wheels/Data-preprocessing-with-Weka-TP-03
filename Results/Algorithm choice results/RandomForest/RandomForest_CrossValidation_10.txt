@@ -1,0 +1,73 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     sick
+Instances:    3772
+Attributes:   30
+              age
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              FTI_measured
+              FTI
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 1.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3715               98.4889 %
+Incorrectly Classified Instances        57                1.5111 %
+Kappa statistic                          0.8567
+Mean absolute error                      0.0323
+Root mean squared error                  0.1083
+Relative absolute error                 28.054  %
+Root relative squared error             45.1626 %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.998    0.212    0.986      0.998    0.992      0.861    0.996     1.000     negative
+                 0.788    0.002    0.958      0.788    0.865      0.861    0.996     0.966     sick
+Weighted Avg.    0.985    0.199    0.985      0.985    0.984      0.861    0.996     0.998     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3533    8 |    a = negative
+   49  182 |    b = sick
+

@@ -1,0 +1,180 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.Discretize-D-B40-M-1.0-Rfirst-last-precision6
+Instances:    3772
+Attributes:   258
+              [list of attributes omitted]
+Test mode:    15-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+T3_4 = '(1.105-inf)' AND
+FTI_17 = '(-inf-169.025]' AND
+TT4_5 = '(55.5-inf)': negative (3174.48/2.9)
+
+referral_source = other AND
+sick = f AND
+age_6 = '(-inf-69.1]' AND
+I131_treatment = f AND
+TSH_measured = t AND
+T4U_15 = '(1.02625-inf)': negative (69.64)
+
+T3_measured = f: negative (106.58/2.1)
+
+T3_10 = '(2.6875-inf)': negative (55.39)
+
+TT4_5 = '(-inf-55.5]' AND
+TSH_2 = '(26.50475-inf)': negative (37.13)
+
+TT4_18 = '(-inf-194.6]' AND
+referral_source = SVI AND
+TSH_1 = '(-inf-13.254875]' AND
+FTI_16 = '(-inf-159.2]' AND
+TT4_5 = '(55.5-inf)' AND
+FTI_6 = '(60.95-inf)': sick (156.47/0.58)
+
+sick = f AND
+TT4_18 = '(-inf-194.6]' AND
+age_1 = '(12.35-inf)' AND
+T4U_measured = t AND
+T4U_4 = '(0.457-inf)' AND
+T4U_5 = '(0.50875-inf)' AND
+FTI_1 = '(11.825-inf)' AND
+T4U_17 = '(-inf-1.12975]' AND
+FTI_4 = '(41.3-inf)' AND
+TSH_2 = '(-inf-26.50475]' AND
+T3_9 = '(-inf-2.42375]' AND
+referral_source = other AND
+T3_2 = '(0.5775-inf)' AND
+query_hypothyroid = f AND
+T4U_11 = '(-inf-0.81925]': negative (16.9)
+
+sick = f AND
+TT4_18 = '(-inf-194.6]' AND
+age_1 = '(12.35-inf)' AND
+T4U_measured = f: negative (12.02/0.93)
+
+sick = f AND
+TT4_18 = '(-inf-194.6]' AND
+T4U_4 = '(0.457-inf)' AND
+TT4_1 = '(12.7-inf)' AND
+age_1 = '(12.35-inf)' AND
+T4U_17 = '(-inf-1.12975]' AND
+FTI_4 = '(41.3-inf)' AND
+T4U_5 = '(0.50875-inf)' AND
+TSH_2 = '(-inf-26.50475]' AND
+T3_9 = '(-inf-2.42375]' AND
+age_3 = '(-inf-35.05]' AND
+T3_8 = '(-inf-2.16]': sick (9.0/1.0)
+
+sick = f AND
+TT4_18 = '(-inf-194.6]' AND
+age_2 = '(23.7-inf)' AND
+FTI_1 = '(11.825-inf)' AND
+T4U_3 = '(0.40525-inf)' AND
+T4U_5 = '(0.50875-inf)' AND
+T4U_17 = '(-inf-1.12975]' AND
+FTI_4 = '(41.3-inf)' AND
+TSH_2 = '(-inf-26.50475]' AND
+age_3 = '(35.05-inf)' AND
+T3_8 = '(-inf-2.16]' AND
+FTI_15 = '(149.375-inf)' AND
+TT4_16 = '(-inf-173.2]': negative (24.04/3.0)
+
+TT4_18 = '(194.6-inf)': negative (8.0)
+
+age_2 = '(23.7-inf)' AND
+TT4_1 = '(12.7-inf)' AND
+T4U_3 = '(0.40525-inf)' AND
+T4U_17 = '(-inf-1.12975]' AND
+age_7 = '(-inf-80.45]' AND
+sick = f AND
+FTI_20 = '(-inf-198.5]' AND
+FTI_4 = '(41.3-inf)' AND
+T4U_5 = '(0.50875-inf)' AND
+TSH_2 = '(-inf-26.50475]' AND
+age_3 = '(35.05-inf)' AND
+T3_8 = '(-inf-2.16]' AND
+FTI_19 = '(-inf-188.675]' AND
+FTI_13 = '(-inf-129.725]' AND
+T3_6 = '(-inf-1.6325]' AND
+psych = f AND
+referral_source = other AND
+age_5 = '(-inf-57.75]': negative (7.03)
+
+age_2 = '(23.7-inf)' AND
+TT4_1 = '(12.7-inf)' AND
+T4U_3 = '(0.40525-inf)' AND
+T4U_17 = '(-inf-1.12975]' AND
+TT4_6 = '(66.2-inf)' AND
+age_3 = '(35.05-inf)': sick (42.24/4.07)
+
+FTI_14 = '(-inf-139.55]' AND
+age_7 = '(-inf-80.45]' AND
+FTI_12 = '(-inf-119.9]' AND
+TT4_1 = '(12.7-inf)' AND
+query_hypothyroid = f AND
+on_thyroxine = f AND
+FTI_8 = '(-inf-80.6]' AND
+query_hyperthyroid = f AND
+FTI_4 = '(41.3-inf)' AND
+T3_6 = '(-inf-1.6325]' AND
+age_4 = '(46.4-inf)' AND
+sex = F AND
+T4U_6 = '(0.5605-inf)': negative (9.0/1.0)
+
+FTI_14 = '(-inf-139.55]' AND
+query_hypothyroid = f AND
+FTI_1 = '(11.825-inf)' AND
+age_2 = '(23.7-inf)' AND
+query_hyperthyroid = f AND
+T3_6 = '(-inf-1.6325]' AND
+T4U_8 = '(0.664-inf)': sick (15.0/1.0)
+
+age_4 = '(-inf-46.4]': negative (10.05/0.01)
+
+TT4_5 = '(-inf-55.5]' AND
+TT4_4 = '(44.8-inf)': negative (8.01)
+
+FTI_12 = '(-inf-119.9]' AND
+referral_source = SVI AND
+age_5 = '(57.75-inf)': negative (4.0/1.0)
+
+TSH_1 = '(-inf-13.254875]': sick (5.01/1.01)
+
+: negative (2.0)
+
+Number of Rules  : 	20
+
+
+Time taken to build model: 0.69 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3712               98.4093 %
+Incorrectly Classified Instances        60                1.5907 %
+Kappa statistic                          0.8611
+Mean absolute error                      0.0185
+Root mean squared error                  0.1199
+Relative absolute error                 16.0282 %
+Root relative squared error             50.0036 %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.992    0.134    0.991      0.992    0.992      0.861    0.929     0.984     negative
+                 0.866    0.008    0.873      0.866    0.870      0.861    0.929     0.867     sick
+Weighted Avg.    0.984    0.126    0.984      0.984    0.984      0.861    0.929     0.977     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3512   29 |    a = negative
+   31  200 |    b = sick
+

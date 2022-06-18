@@ -1,0 +1,89 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.Remove-R2-5,7-16,18,25-28
+Instances:    3772
+Attributes:   11
+              age
+              sick
+              TSH_measured
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              referral_source
+              Class
+Test mode:    3772-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+T3 <= 1.1
+|   T3_measured = t
+|   |   TT4 <= 53
+|   |   |   referral_source = SVHC: negative (0.0)
+|   |   |   referral_source = other: negative (30.0)
+|   |   |   referral_source = SVI
+|   |   |   |   TT4 <= 31: negative (15.0)
+|   |   |   |   TT4 > 31
+|   |   |   |   |   age <= 60
+|   |   |   |   |   |   T4U <= 0.71: negative (6.55/2.0)
+|   |   |   |   |   |   T4U > 0.71: sick (5.45/0.45)
+|   |   |   |   |   age > 60: negative (16.0/2.0)
+|   |   |   referral_source = STMW: negative (0.0)
+|   |   |   referral_source = SVHD: negative (0.0)
+|   |   TT4 > 53
+|   |   |   TT4 <= 136
+|   |   |   |   referral_source = SVHC: sick (9.0)
+|   |   |   |   referral_source = other
+|   |   |   |   |   sick = f
+|   |   |   |   |   |   age <= 77
+|   |   |   |   |   |   |   T4U <= 0.56: sick (3.28/0.28)
+|   |   |   |   |   |   |   T4U > 0.56: negative (31.72/8.0)
+|   |   |   |   |   |   age > 77: sick (8.0)
+|   |   |   |   |   sick = t: sick (3.0)
+|   |   |   |   referral_source = SVI: sick (166.0/6.0)
+|   |   |   |   referral_source = STMW: sick (0.0)
+|   |   |   |   referral_source = SVHD: sick (3.0)
+|   |   |   TT4 > 136
+|   |   |   |   T4U_measured = t: negative (12.0/1.0)
+|   |   |   |   T4U_measured = f: sick (2.0)
+|   T3_measured = f: negative (79.64/0.31)
+T3 > 1.1: negative (3381.36/24.69)
+
+Number of Leaves  : 	20
+
+Size of the tree : 	33
+
+
+Time taken to build model: 0.05 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3702               98.1442 %
+Incorrectly Classified Instances        70                1.8558 %
+Kappa statistic                          0.8282
+Mean absolute error                      0.0273
+Root mean squared error                  0.1276
+Relative absolute error                 23.7262 %
+Root relative squared error             53.2154 %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.994    0.216    0.986      0.994    0.990      0.830    0.902     0.988     negative
+                 0.784    0.006    0.900      0.784    0.838      0.830    0.902     0.815     sick
+Weighted Avg.    0.981    0.204    0.981      0.981    0.981      0.830    0.902     0.977     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3521   20 |    a = negative
+   50  181 |    b = sick
+

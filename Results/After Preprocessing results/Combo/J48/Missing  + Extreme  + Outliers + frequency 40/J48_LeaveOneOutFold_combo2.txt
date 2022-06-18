@@ -1,0 +1,96 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.InterquartileRange-Rfirst-last-O3.0-E6.0-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Llast-weka.filters.unsupervised.attribute.Remove-R32-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Llast-weka.filters.unsupervised.attribute.Remove-R31-weka.filters.unsupervised.attribute.Discretize-D-F-B40-M-1.0-Rfirst-last-precision6
+Instances:    3439
+Attributes:   248
+              [list of attributes omitted]
+Test mode:    3439-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+T3_3 = '(-inf-1.15]'
+|   FTI_38 = '(-inf-157.5]'
+|   |   referral_source = SVHC: sick (9.0)
+|   |   referral_source = other
+|   |   |   age_37 = '(-inf-77.5]'
+|   |   |   |   sick = f
+|   |   |   |   |   age_33 = '(-inf-70.5]': negative (22.0)
+|   |   |   |   |   age_33 = '(70.5-inf)'
+|   |   |   |   |   |   T4U_13 = '(-inf-0.905]': sick (4.0)
+|   |   |   |   |   |   T4U_13 = '(0.905-inf)': negative (3.0)
+|   |   |   |   sick = t: sick (2.0)
+|   |   |   age_37 = '(77.5-inf)': sick (8.0)
+|   |   referral_source = SVI
+|   |   |   TT4_1 = '(-inf-61.5]'
+|   |   |   |   FTI_5 = '(-inf-86.5]'
+|   |   |   |   |   T4U_1 = '(-inf-0.705]'
+|   |   |   |   |   |   FTI_3 = '(-inf-80.5]': negative (4.0/1.0)
+|   |   |   |   |   |   FTI_3 = '(80.5-inf)': sick (2.0)
+|   |   |   |   |   T4U_1 = '(0.705-inf)': sick (17.0/1.0)
+|   |   |   |   FTI_5 = '(86.5-inf)'
+|   |   |   |   |   TSH_10 = '(-inf-0.595]': negative (3.0)
+|   |   |   |   |   TSH_10 = '(0.595-inf)': sick (3.0/1.0)
+|   |   |   TT4_1 = '(61.5-inf)': sick (146.0/1.0)
+|   |   referral_source = STMW: sick (0.0)
+|   |   referral_source = SVHD: sick (3.0)
+|   FTI_38 = '(157.5-inf)'
+|   |   TT4_11 = '(-inf-92.5]': sick (3.0)
+|   |   TT4_11 = '(92.5-inf)': negative (12.0)
+T3_3 = '(1.15-inf)'
+|   FTI_39 = '(-inf-170.5]'
+|   |   TT4_1 = '(-inf-61.5]'
+|   |   |   age_34 = '(-inf-72.5]'
+|   |   |   |   T4U_32 = '(-inf-1.095]': negative (43.0/4.0)
+|   |   |   |   T4U_32 = '(1.095-inf)': sick (2.0)
+|   |   |   age_34 = '(72.5-inf)': sick (2.0)
+|   |   TT4_1 = '(61.5-inf)': negative (3079.0/1.0)
+|   FTI_39 = '(170.5-inf)'
+|   |   on_thyroxine = f
+|   |   |   TSH_7 = '(-inf-0.295]'
+|   |   |   |   T3_12 = '(-inf-2.00675]': sick (7.0)
+|   |   |   |   T3_12 = '(2.00675-inf)'
+|   |   |   |   |   T3_19 = '(-inf-2.65]'
+|   |   |   |   |   |   T3_measured = t
+|   |   |   |   |   |   |   TSH_3 = '(-inf-0.075]': sick (5.0)
+|   |   |   |   |   |   |   TSH_3 = '(0.075-inf)': negative (2.0)
+|   |   |   |   |   |   T3_measured = f: negative (6.0)
+|   |   |   |   |   T3_19 = '(2.65-inf)': negative (10.0)
+|   |   |   TSH_7 = '(0.295-inf)': negative (14.0)
+|   |   on_thyroxine = t: negative (28.0)
+
+Number of Leaves  : 	27
+
+Size of the tree : 	50
+
+
+Time taken to build model: 0.23 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3394               98.6915 %
+Incorrectly Classified Instances        45                1.3085 %
+Kappa statistic                          0.8856
+Mean absolute error                      0.0143
+Root mean squared error                  0.1084
+Relative absolute error                 12.1339 %
+Root relative squared error             44.6499 %
+Total Number of Instances             3439     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.995    0.134    0.991      0.995    0.993      0.886    0.947     0.993     negative
+                 0.866    0.005    0.921      0.866    0.893      0.886    0.947     0.895     sick
+Weighted Avg.    0.987    0.126    0.987      0.987    0.987      0.886    0.947     0.987     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3207   16 |    a = negative
+   29  187 |    b = sick
+

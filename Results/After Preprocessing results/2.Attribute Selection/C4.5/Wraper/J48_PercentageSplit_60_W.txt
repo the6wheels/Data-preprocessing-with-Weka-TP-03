@@ -1,0 +1,124 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.Remove-R2,5,7-17,21,24-25,27-29
+Instances:    3772
+Attributes:   11
+              age
+              on_thyroxine
+              query_on_thyroxine
+              sick
+              TSH
+              T3_measured
+              T3
+              TT4
+              T4U_measured
+              FTI
+              Class
+Test mode:    split 60.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+T3 <= 1.1
+|   T3_measured = t
+|   |   TT4 <= 53
+|   |   |   TSH <= 19
+|   |   |   |   FTI <= 64: sick (6.0)
+|   |   |   |   FTI > 64
+|   |   |   |   |   TSH <= 8.5: negative (12.0/1.0)
+|   |   |   |   |   TSH > 8.5: sick (2.0)
+|   |   |   TSH > 19: negative (53.0)
+|   |   TT4 > 53
+|   |   |   TT4 <= 136
+|   |   |   |   sick = f
+|   |   |   |   |   age <= 77
+|   |   |   |   |   |   query_on_thyroxine = f
+|   |   |   |   |   |   |   T4U_measured = t
+|   |   |   |   |   |   |   |   FTI <= 75
+|   |   |   |   |   |   |   |   |   FTI <= 61: negative (4.0)
+|   |   |   |   |   |   |   |   |   FTI > 61
+|   |   |   |   |   |   |   |   |   |   FTI <= 69: sick (5.0)
+|   |   |   |   |   |   |   |   |   |   FTI > 69: negative (4.0/1.0)
+|   |   |   |   |   |   |   |   FTI > 75
+|   |   |   |   |   |   |   |   |   FTI <= 156
+|   |   |   |   |   |   |   |   |   |   age <= 44
+|   |   |   |   |   |   |   |   |   |   |   TSH <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   TSH <= 1.7
+|   |   |   |   |   |   |   |   |   |   |   |   |   age <= 37: sick (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   age > 37: negative (4.33/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   TSH > 1.7: negative (6.29)
+|   |   |   |   |   |   |   |   |   |   |   TSH > 3: sick (8.38/0.38)
+|   |   |   |   |   |   |   |   |   |   age > 44: sick (108.0/3.0)
+|   |   |   |   |   |   |   |   |   FTI > 156
+|   |   |   |   |   |   |   |   |   |   T3 <= 0.7: sick (2.0)
+|   |   |   |   |   |   |   |   |   |   T3 > 0.7: negative (5.0)
+|   |   |   |   |   |   |   T4U_measured = f
+|   |   |   |   |   |   |   |   TT4 <= 92: negative (3.0)
+|   |   |   |   |   |   |   |   TT4 > 92: sick (4.0)
+|   |   |   |   |   |   query_on_thyroxine = t
+|   |   |   |   |   |   |   T3 <= 0.8: sick (2.0)
+|   |   |   |   |   |   |   T3 > 0.8: negative (2.0)
+|   |   |   |   |   age > 77: sick (38.0)
+|   |   |   |   sick = t: sick (25.0)
+|   |   |   TT4 > 136
+|   |   |   |   T4U_measured = t: negative (12.0/1.0)
+|   |   |   |   T4U_measured = f: sick (2.0)
+|   T3_measured = f: negative (79.64/0.31)
+T3 > 1.1
+|   FTI <= 171
+|   |   TT4 <= 56
+|   |   |   T4U_measured = t
+|   |   |   |   TSH <= 4.9
+|   |   |   |   |   FTI <= 53: sick (8.05/1.36)
+|   |   |   |   |   FTI > 53: negative (8.39/1.0)
+|   |   |   |   TSH > 4.9: negative (24.66)
+|   |   |   T4U_measured = f: negative (9.85)
+|   |   TT4 > 56: negative (3187.63/1.0)
+|   FTI > 171
+|   |   T3 <= 2.6
+|   |   |   on_thyroxine = f
+|   |   |   |   T3_measured = t
+|   |   |   |   |   TSH <= 0.27: sick (19.02/3.02)
+|   |   |   |   |   TSH > 0.27: negative (11.76)
+|   |   |   |   T3_measured = f: negative (8.79)
+|   |   |   on_thyroxine = t: negative (19.64)
+|   |   T3 > 2.6: negative (83.58)
+
+Number of Leaves  : 	33
+
+Size of the tree : 	65
+
+
+Time taken to build model: 0.06 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1487               98.5421 %
+Incorrectly Classified Instances        22                1.4579 %
+Kappa statistic                          0.8714
+Mean absolute error                      0.0214
+Root mean squared error                  0.1162
+Relative absolute error                 18.639  %
+Root relative squared error             49.3272 %
+Total Number of Instances             1509     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.991    0.101    0.994      0.991    0.992      0.872    0.955     0.994     negative
+                 0.899    0.009    0.860      0.899    0.879      0.872    0.955     0.798     sick
+Weighted Avg.    0.985    0.096    0.986      0.985    0.986      0.872    0.955     0.983     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1407   13 |    a = negative
+    9   80 |    b = sick
+

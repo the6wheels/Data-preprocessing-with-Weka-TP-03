@@ -1,0 +1,158 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.InterquartileRange-Rfirst-last-O3.0-E6.0-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Llast-weka.filters.unsupervised.attribute.Remove-R32-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Llast-weka.filters.unsupervised.attribute.Remove-R31-weka.filters.unsupervised.attribute.Discretize-D-F-B40-M-1.0-Rfirst-last-precision6
+Instances:    3439
+Attributes:   248
+              [list of attributes omitted]
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+T3_3 = '(1.15-inf)' AND
+FTI_39 = '(-inf-170.5]' AND
+TT4_1 = '(61.5-inf)': negative (3079.0/1.0)
+
+T3_3 = '(1.15-inf)' AND
+T4U_33 = '(-inf-1.115]' AND
+referral_source = other AND
+TSH_12 = '(0.765-inf)': negative (27.0)
+
+T3_19 = '(-inf-2.65]' AND
+T3_9 = '(-inf-1.75]' AND
+TT4_39 = '(-inf-169.5]' AND
+FTI_38 = '(-inf-157.5]' AND
+TT4_37 = '(-inf-147.5]' AND
+referral_source = SVI AND
+TT4_1 = '(61.5-inf)': sick (146.0/1.0)
+
+T3_19 = '(2.65-inf)': negative (17.0)
+
+T4U_measured = t AND
+age_37 = '(77.5-inf)' AND
+TT4_32 = '(-inf-127.5]': sick (15.0)
+
+T4U_measured = t AND
+TT4_17 = '(101.5-inf)' AND
+on_thyroxine = t: negative (24.0)
+
+goitre = f AND
+T4U_33 = '(-inf-1.115]' AND
+T4U_measured = t AND
+on_thyroxine = f AND
+age_1 = '(17.5-inf)' AND
+T3_measured = t AND
+TSH_2 = '(0.0375-inf)' AND
+sick = f AND
+TSH_37 = '(-inf-6.75]' AND
+T3_1 = '(0.75-inf)' AND
+T4U_2 = '(0.745-inf)' AND
+T4U_31 = '(-inf-1.075]' AND
+T4U_27 = '(-inf-1.035]' AND
+TSH_7 = '(0.295-inf)' AND
+FTI_16 = '(104.5-inf)': negative (13.0)
+
+T4U_measured = t AND
+on_thyroxine = f AND
+age_1 = '(17.5-inf)' AND
+goitre = f AND
+T3_17 = '(-inf-2.45]' AND
+T4U_33 = '(-inf-1.115]' AND
+T3_measured = t AND
+TSH_2 = '(0.0375-inf)' AND
+sick = f AND
+age_3 = '(22.5-inf)' AND
+T3_12 = '(-inf-2.00675]' AND
+TSH_3 = '(0.075-inf)' AND
+TSH_37 = '(-inf-6.75]' AND
+age_34 = '(-inf-72.5]' AND
+T3_9 = '(-inf-1.75]' AND
+age_9 = '(34.5-inf)' AND
+referral_source = other: negative (17.0/1.0)
+
+T4U_measured = t AND
+age_1 = '(17.5-inf)' AND
+on_thyroxine = f AND
+T4U_29 = '(-inf-1.055]' AND
+T3_measured = f AND
+sex = F: negative (9.0)
+
+T4U_measured = t AND
+age_1 = '(17.5-inf)' AND
+TT4_38 = '(-inf-157.5]' AND
+age_37 = '(-inf-77.5]' AND
+T3_13 = '(-inf-2.05675]' AND
+TSH_3 = '(0.075-inf)' AND
+TT4_1 = '(61.5-inf)': sick (19.0/1.0)
+
+TT4_38 = '(-inf-157.5]' AND
+T4U_28 = '(-inf-1.045]' AND
+goitre = f AND
+T4U_13 = '(0.905-inf)': negative (14.0)
+
+age_1 = '(17.5-inf)' AND
+psych = f AND
+T4U_11 = '(0.885-inf)': sick (13.0)
+
+age_5 = '(26.5-inf)' AND
+psych = f AND
+TT4_38 = '(-inf-157.5]' AND
+age_37 = '(-inf-77.5]' AND
+T3_3 = '(1.15-inf)' AND
+age_16 = '(-inf-48.5]': negative (5.0)
+
+age_5 = '(26.5-inf)' AND
+psych = f AND
+age_15 = '(46.5-inf)' AND
+TT4_38 = '(-inf-157.5]' AND
+age_37 = '(-inf-77.5]' AND
+TSH_14 = '(0.925-inf)' AND
+TSH_28 = '(-inf-2.55]': sick (7.0)
+
+TT4_38 = '(-inf-157.5]' AND
+age_5 = '(26.5-inf)' AND
+age_34 = '(-inf-72.5]' AND
+psych = f AND
+age_20 = '(-inf-55.5]': sick (10.0/1.0)
+
+TT4_38 = '(-inf-157.5]' AND
+age_28 = '(-inf-63.5]': negative (9.0)
+
+TT4_38 = '(-inf-157.5]' AND
+TSH_12 = '(-inf-0.765]': negative (9.0/1.0)
+
+: sick (6.0)
+
+Number of Rules  : 	18
+
+
+Time taken to build model: 0.33 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3387               98.4879 %
+Incorrectly Classified Instances        52                1.5121 %
+Kappa statistic                          0.8699
+Mean absolute error                      0.0161
+Root mean squared error                  0.1199
+Relative absolute error                 13.6561 %
+Root relative squared error             49.4179 %
+Total Number of Instances             3439     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.993    0.134    0.991      0.993    0.992      0.870    0.913     0.985     negative
+                 0.866    0.007    0.890      0.866    0.878      0.870    0.913     0.784     sick
+Weighted Avg.    0.985    0.126    0.985      0.985    0.985      0.870    0.913     0.972     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3200   23 |    a = negative
+   29  187 |    b = sick
+

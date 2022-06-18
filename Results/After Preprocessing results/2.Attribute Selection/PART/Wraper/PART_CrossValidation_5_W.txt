@@ -1,0 +1,102 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.Remove-R1-2,4-8,10-16,19,21,24-25,27-29
+Instances:    3772
+Attributes:   9
+              on_thyroxine
+              I131_treatment
+              TSH_measured
+              TSH
+              T3
+              TT4
+              T4U_measured
+              FTI
+              Class
+Test mode:    5-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+T3 > 1.1 AND
+FTI <= 171 AND
+TT4 > 56: negative (3187.63/1.0)
+
+T3 > 1.1 AND
+on_thyroxine = f AND
+T3 > 2.6: negative (72.83/0.46)
+
+TSH_measured = t AND
+TSH > 18 AND
+TT4 <= 67: negative (75.65)
+
+TSH_measured = f: negative (46.01/2.0)
+
+on_thyroxine = t AND
+TSH <= 0.72: negative (43.16)
+
+T3 <= 1.1 AND
+TT4 > 140: negative (15.82/1.0)
+
+T4U_measured = t AND
+T3 <= 1.1 AND
+FTI > 155 AND
+TT4 > 92: negative (11.07)
+
+T4U_measured = t AND
+T3 <= 1.1 AND
+TT4 > 50: sick (234.53/43.81)
+
+on_thyroxine = f AND
+T4U_measured = f AND
+T3 > 1: negative (9.5)
+
+TSH <= 0.25 AND
+TT4 > 151: sick (17.06/1.06)
+
+FTI > 62 AND
+T4U_measured = t: negative (28.58/1.0)
+
+on_thyroxine = f AND
+T3 <= 1.7 AND
+T4U_measured = t AND
+TSH <= 3.9: sick (8.45)
+
+TT4 <= 88 AND
+T3 > 0.4 AND
+TT4 > 42: negative (9.74/0.17)
+
+: sick (11.98/1.77)
+
+Number of Rules  : 	14
+
+
+Time taken to build model: 0.09 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3702               98.1442 %
+Incorrectly Classified Instances        70                1.8558 %
+Kappa statistic                          0.8379
+Mean absolute error                      0.0368
+Root mean squared error                  0.1253
+Relative absolute error                 31.917  %
+Root relative squared error             52.2457 %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.990    0.156    0.990      0.990    0.990      0.838    0.973     0.997     negative
+                 0.844    0.010    0.852      0.844    0.848      0.838    0.973     0.809     sick
+Weighted Avg.    0.981    0.147    0.981      0.981    0.981      0.838    0.973     0.985     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3507   34 |    a = negative
+   36  195 |    b = sick
+

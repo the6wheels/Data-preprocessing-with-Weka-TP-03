@@ -1,0 +1,180 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.FilteredClassifier -F "weka.filters.supervised.attribute.Discretize -D -R first-last -precision 6" -S 1 -W weka.classifiers.rules.PART -- -C 0.25 -M 2
+Relation:     sick
+Instances:    3772
+Attributes:   30
+              age
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              FTI_measured
+              FTI
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    3772-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+FilteredClassifier using weka.classifiers.rules.PART -C 0.25 -M 2 on data filtered through weka.filters.supervised.attribute.Discretize -D -R first-last -precision 6
+
+Filtered Header
+@relation sick-weka.filters.supervised.attribute.Discretize-D-Rfirst-last-precision6
+
+@attribute age_1 {'\'(-inf-43.5]\'','\'(43.5-inf)\''}
+@attribute age_2 {'\'(-inf-69.5]\'','\'(69.5-inf)\''}
+@attribute sex {F,M}
+@attribute on_thyroxine {f,t}
+@attribute query_on_thyroxine {f,t}
+@attribute on_antithyroid_medication {f,t}
+@attribute sick {f,t}
+@attribute pregnant {f,t}
+@attribute thyroid_surgery {f,t}
+@attribute I131_treatment {f,t}
+@attribute query_hypothyroid {f,t}
+@attribute query_hyperthyroid {f,t}
+@attribute lithium {f,t}
+@attribute goitre {f,t}
+@attribute tumor {f,t}
+@attribute hypopituitary {f,t}
+@attribute psych {f,t}
+@attribute TSH_measured {t,f}
+@attribute TSH {'\'All\''}
+@attribute T3_measured {t,f}
+@attribute T3_1 {'\'(-inf-1.15]\'','\'(1.15-inf)\''}
+@attribute TT4_measured {t,f}
+@attribute TT4_1 {'\'(-inf-87.5]\'','\'(87.5-inf)\''}
+@attribute T4U_measured {t,f}
+@attribute T4U_1 {'\'(-inf-0.775]\'','\'(0.775-inf)\''}
+@attribute T4U_2 {'\'(-inf-0.885]\'','\'(0.885-inf)\''}
+@attribute T4U_3 {'\'(-inf-1.145]\'','\'(1.145-inf)\''}
+@attribute FTI_measured {t,f}
+@attribute FTI {'\'All\''}
+@attribute TBG_measured {f}
+@attribute TBG {'\'All\''}
+@attribute referral_source {SVHC,other,SVI,STMW,SVHD}
+@attribute Class {negative,sick}
+
+@data
+
+
+Classifier Model
+PART decision list
+------------------
+
+T3_1 = '(1.15-inf)': negative (3381.36/24.69)
+
+T3_measured = t AND
+referral_source = SVI AND
+sick = f AND
+TT4_1 = '(87.5-inf)' AND
+on_thyroxine = f: sick (85.0/8.0)
+
+T3_measured = f: negative (79.64/0.31)
+
+sick = f AND
+T4U_measured = t AND
+T4U_3 = '(-inf-1.145]' AND
+referral_source = other AND
+age_2 = '(-inf-69.5]' AND
+on_thyroxine = f: negative (41.0/3.0)
+
+T4U_3 = '(-inf-1.145]' AND
+T4U_measured = t AND
+sick = f AND
+psych = f AND
+T4U_2 = '(-inf-0.885]' AND
+on_thyroxine = f AND
+query_on_thyroxine = f AND
+referral_source = SVI AND
+query_hypothyroid = f: sick (74.0/16.0)
+
+sick = t: sick (25.0)
+
+T4U_measured = t AND
+T4U_3 = '(-inf-1.145]' AND
+age_1 = '(43.5-inf)' AND
+psych = f AND
+referral_source = other AND
+on_thyroxine = f: sick (16.0/4.0)
+
+psych = f AND
+T4U_measured = t AND
+T4U_3 = '(1.145-inf)': negative (10.0)
+
+T4U_measured = f: negative (7.0)
+
+age_1 = '(43.5-inf)' AND
+psych = f AND
+referral_source = SVHC: sick (6.0)
+
+age_1 = '(-inf-43.5]': sick (4.0)
+
+psych = t: sick (4.0)
+
+referral_source = other AND
+TT4_1 = '(87.5-inf)': negative (3.0)
+
+referral_source = SVI AND
+query_hypothyroid = f AND
+T4U_2 = '(0.885-inf)': negative (14.0/2.0)
+
+referral_source = SVI AND
+age_2 = '(-inf-69.5]': sick (7.0)
+
+T4U_2 = '(-inf-0.885]': negative (9.0/3.0)
+
+: sick (6.0/1.0)
+
+Number of Rules  : 	17
+
+
+Time taken to build model: 0.16 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3697               98.0117 %
+Incorrectly Classified Instances        75                1.9883 %
+Kappa statistic                          0.8267
+Mean absolute error                      0.0326
+Root mean squared error                  0.1338
+Relative absolute error                 28.3164 %
+Root relative squared error             55.7719 %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.990    0.165    0.989      0.990    0.989      0.827    0.891     0.984     negative
+                 0.835    0.010    0.839      0.835    0.837      0.827    0.891     0.777     sick
+Weighted Avg.    0.980    0.155    0.980      0.980    0.980      0.827    0.891     0.971     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3504   37 |    a = negative
+   38  193 |    b = sick
+

@@ -1,0 +1,113 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.Remove-R2-5,7-16,18,25-28
+Instances:    3772
+Attributes:   11
+              age
+              sick
+              TSH_measured
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              referral_source
+              Class
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+T3 > 1.1 AND
+TT4 <= 151 AND
+TT4 > 56: negative (2986.67)
+
+referral_source = other AND
+age <= 72 AND
+T4U > 1.02: negative (203.82)
+
+TT4 > 145 AND
+T3 > 2.6: negative (117.75)
+
+T3_measured = f AND
+referral_source = other: negative (60.45/1.0)
+
+TT4 > 53 AND
+TT4 <= 136 AND
+T3_measured = t AND
+referral_source = SVI: sick (168.11/6.11)
+
+sick = f AND
+age <= 70 AND
+T4U_measured = t AND
+referral_source = other: negative (71.0/15.0)
+
+age <= 32: negative (22.4)
+
+sick = f AND
+T4U > 1.12: negative (15.91/0.23)
+
+sick = f AND
+referral_source = SVHC: sick (10.04/2.04)
+
+sick = f AND
+T4U_measured = f: negative (11.27/1.77)
+
+referral_source = SVI AND
+T3_measured = f AND
+TT4 > 65: negative (4.94)
+
+sick = f AND
+referral_source = SVI AND
+T3_measured = t: negative (63.05/20.0)
+
+TT4 <= 137 AND
+sick = f AND
+referral_source = other AND
+TT4 > 62: sick (13.0/1.0)
+
+TT4 > 131: negative (10.48/1.0)
+
+sick = t: sick (5.0)
+
+referral_source = other: negative (4.0/1.0)
+
+: sick (4.1/0.1)
+
+Number of Rules  : 	17
+
+
+Time taken to build model: 0.05 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1850               98.0912 %
+Incorrectly Classified Instances        36                1.9088 %
+Kappa statistic                          0.832 
+Mean absolute error                      0.0242
+Root mean squared error                  0.1309
+Relative absolute error                 20.9661 %
+Root relative squared error             54.2619 %
+Total Number of Instances             1886     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.992    0.179    0.988      0.992    0.990      0.832    0.964     0.996     negative
+                 0.821    0.008    0.865      0.821    0.842      0.832    0.965     0.779     sick
+Weighted Avg.    0.981    0.169    0.981      0.981    0.981      0.832    0.964     0.982     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1754   15 |    a = negative
+   21   96 |    b = sick
+

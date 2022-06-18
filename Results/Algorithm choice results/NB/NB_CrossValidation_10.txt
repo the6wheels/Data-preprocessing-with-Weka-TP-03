@@ -1,0 +1,229 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     sick
+Instances:    3772
+Attributes:   30
+              age
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              FTI_measured
+              FTI
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                               Class
+Attribute                   negative     sick
+                              (0.94)   (0.06)
+==============================================
+age
+  mean                          50.99  64.0881
+  std. dev.                   20.2327  16.3603
+  weight sum                     3540      231
+  precision                    4.9348   4.9348
+
+sex
+  F                            2345.0    137.0
+  M                            1054.0     90.0
+  [total]                      3399.0    227.0
+
+on_thyroxine
+  f                            3090.0    220.0
+  t                             453.0     13.0
+  [total]                      3543.0    233.0
+
+query_on_thyroxine
+  f                            3496.0    228.0
+  t                              47.0      5.0
+  [total]                      3543.0    233.0
+
+on_antithyroid_medication
+  f                            3499.0    232.0
+  t                              44.0      1.0
+  [total]                      3543.0    233.0
+
+sick
+  f                            3420.0    207.0
+  t                             123.0     26.0
+  [total]                      3543.0    233.0
+
+pregnant
+  f                            3489.0    232.0
+  t                              54.0      1.0
+  [total]                      3543.0    233.0
+
+thyroid_surgery
+  f                            3489.0    232.0
+  t                              54.0      1.0
+  [total]                      3543.0    233.0
+
+I131_treatment
+  f                            3484.0    231.0
+  t                              59.0      2.0
+  [total]                      3543.0    233.0
+
+query_hypothyroid
+  f                            3336.0    204.0
+  t                             207.0     29.0
+  [total]                      3543.0    233.0
+
+query_hyperthyroid
+  f                            3313.0    224.0
+  t                             230.0      9.0
+  [total]                      3543.0    233.0
+
+lithium
+  f                            3525.0    231.0
+  t                              18.0      2.0
+  [total]                      3543.0    233.0
+
+goitre
+  f                            3510.0    230.0
+  t                              33.0      3.0
+  [total]                      3543.0    233.0
+
+tumor
+  f                            3448.0    230.0
+  t                              95.0      3.0
+  [total]                      3543.0    233.0
+
+hypopituitary
+  f                            3542.0    231.0
+  t                               1.0      2.0
+  [total]                      3543.0    233.0
+
+psych
+  f                            3365.0    225.0
+  t                             178.0      8.0
+  [total]                      3543.0    233.0
+
+TSH_measured
+  t                            3175.0    230.0
+  f                             368.0      3.0
+  [total]                      3543.0    233.0
+
+TSH
+  mean                         5.0964   4.1999
+  std. dev.                    25.142  13.2259
+  weight sum                     3174      229
+  precision                    1.8531   1.8531
+
+T3_measured
+  t                            2776.0    229.0
+  f                             767.0      4.0
+  [total]                      3543.0    233.0
+
+T3
+  mean                          2.108   0.8921
+  std. dev.                    0.7813   0.4392
+  weight sum                     2775      228
+  precision                    0.1551   0.1551
+
+TT4_measured
+  t                            3311.0    232.0
+  f                             232.0      1.0
+  [total]                      3543.0    233.0
+
+TT4
+  mean                       109.4196  92.6175
+  std. dev.                   35.6301  31.3848
+  weight sum                     3310      231
+  precision                    1.7833   1.7833
+
+T4U_measured
+  t                            3163.0    224.0
+  f                             380.0      9.0
+  [total]                      3543.0    233.0
+
+T4U
+  mean                         1.0063   0.8352
+  std. dev.                     0.194   0.1351
+  weight sum                     3162      223
+  precision                    0.0143   0.0143
+
+FTI_measured
+  t                            3165.0    224.0
+  f                             378.0      9.0
+  [total]                      3543.0    233.0
+
+FTI
+  mean                        110.446 110.8756
+  std. dev.                   33.0156  34.1984
+  weight sum                     3164      223
+  precision                    1.6867   1.6867
+
+TBG_measured
+  f                            3542.0    232.0
+  [total]                      3542.0    232.0
+
+TBG
+  mean                              0        0
+  std. dev.                    0.0017   0.0017
+  weight sum                        0        0
+  precision                      0.01     0.01
+
+referral_source
+  SVHC                          378.0     10.0
+  other                        2169.0     34.0
+  SVI                           849.0    187.0
+  STMW                          113.0      1.0
+  SVHD                           37.0      4.0
+  [total]                      3546.0    236.0
+
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3493               92.6034 %
+Incorrectly Classified Instances       279                7.3966 %
+Kappa statistic                          0.5249
+Mean absolute error                      0.0888
+Root mean squared error                  0.2294
+Relative absolute error                 77.0863 %
+Root relative squared error             95.6866 %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.936    0.225    0.985      0.936    0.960      0.550    0.925     0.991     negative
+                 0.775    0.064    0.441      0.775    0.562      0.550    0.925     0.660     sick
+Weighted Avg.    0.926    0.215    0.951      0.926    0.935      0.550    0.925     0.971     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3314  227 |    a = negative
+   52  179 |    b = sick
+

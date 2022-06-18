@@ -1,0 +1,162 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.ReplaceMissingValues
+Instances:    3772
+Attributes:   30
+              age
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              FTI_measured
+              FTI
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+T3 > 1.1 AND
+FTI <= 171 AND
+TT4 > 56: negative (3281.0/1.0)
+
+referral_source = other AND
+sick = f AND
+T4U > 1.02: negative (57.0)
+
+T3 > 1.8 AND
+referral_source = other AND
+on_thyroxine = t: negative (19.0)
+
+T3 > 1.1 AND
+T3 > 2.6: negative (49.0)
+
+TT4 <= 55 AND
+TSH > 19: negative (47.0)
+
+T3_measured = f AND
+sex = F: negative (15.0)
+
+referral_source = SVI AND
+FTI <= 157 AND
+TT4 > 50 AND
+FTI > 64: sick (160.0)
+
+T4U_measured = t AND
+sick = f AND
+TSH_measured = t AND
+T3_measured = t AND
+referral_source = other AND
+age <= 77 AND
+TSH <= 10.3 AND
+TT4 <= 156 AND
+T3 > 0.4 AND
+age <= 71: negative (26.0)
+
+T4U_measured = t AND
+TSH_measured = t AND
+sick = f AND
+T3_measured = t AND
+referral_source = other AND
+query_hyperthyroid = f AND
+query_hypothyroid = f: sick (27.0/5.0)
+
+T4U_measured = t AND
+sick = f AND
+TSH_measured = t AND
+T3_measured = t AND
+referral_source = SVHC: sick (9.0/1.0)
+
+T4U_measured = f: negative (7.0)
+
+sick = f AND
+TSH_measured = f: negative (6.0/1.0)
+
+sick = f AND
+T3_measured = t AND
+referral_source = other AND
+TT4 <= 172: sick (5.0)
+
+sick = f AND
+T3_measured = t AND
+referral_source = SVI AND
+FTI <= 66 AND
+TT4 <= 58: sick (14.0)
+
+sick = f AND
+T3_measured = t AND
+referral_source = SVI AND
+sex = F AND
+on_thyroxine = f AND
+TSH > 0.17 AND
+T4U > 0.57: negative (10.0)
+
+sick = f AND
+T3_measured = t AND
+referral_source = SVI AND
+sex = F AND
+on_thyroxine = f: sick (16.0/6.0)
+
+sick = f AND
+T3_measured = t: negative (16.0/2.0)
+
+: sick (8.0)
+
+Number of Rules  : 	18
+
+
+Time taken to build model: 0.17 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1829               96.9777 %
+Incorrectly Classified Instances        57                3.0223 %
+Kappa statistic                          0.7284
+Mean absolute error                      0.0287
+Root mean squared error                  0.1499
+Relative absolute error                 24.8669 %
+Root relative squared error             62.144  %
+Total Number of Instances             1886     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.987    0.291    0.981      0.987    0.984      0.729    0.942     0.993     negative
+                 0.709    0.013    0.783      0.709    0.744      0.729    0.942     0.796     sick
+Weighted Avg.    0.970    0.273    0.969      0.970    0.969      0.729    0.942     0.980     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1746   23 |    a = negative
+   34   83 |    b = sick
+

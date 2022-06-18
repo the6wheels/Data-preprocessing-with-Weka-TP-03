@@ -1,0 +1,147 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     sick
+Instances:    3772
+Attributes:   30
+              age
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              FTI_measured
+              FTI
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+T3 > 1.1 AND
+FTI <= 171 AND
+TT4 > 56: negative (3187.63/1.0)
+
+referral_source = other AND
+T3_measured = f: negative (112.3/1.0)
+
+referral_source = other AND
+sick = f AND
+T3 <= 2.6 AND
+TT4 <= 59: negative (54.58)
+
+T3 > 1.8 AND
+T3 > 2.6: negative (68.81/0.33)
+
+TT4 <= 50 AND
+TSH > 20: negative (28.11)
+
+referral_source = SVI AND
+T3_measured = t AND
+FTI <= 157 AND
+TT4 > 53 AND
+FTI > 65: sick (156.14/0.5)
+
+sick = f AND
+T4U_measured = f: negative (12.28/1.2)
+
+sick = f AND
+TT4 > 193: negative (11.67)
+
+sick = f AND
+referral_source = SVHC: sick (10.04/2.04)
+
+sick = f AND
+on_thyroxine = t AND
+TSH <= 1.2: negative (12.09)
+
+sick = f AND
+on_thyroxine = f AND
+referral_source = other AND
+age <= 77 AND
+T3 <= 1.7 AND
+T3 > 0.5 AND
+query_hypothyroid = f: negative (22.0/2.0)
+
+referral_source = other AND
+query_hypothyroid = f AND
+T4U > 0.8: sick (21.0)
+
+sick = f AND
+referral_source = other AND
+TSH > 0.22: sick (8.0/1.0)
+
+sick = f AND
+referral_source = SVI AND
+T3 <= 1.9 AND
+FTI > 78: negative (23.05/4.0)
+
+referral_source = SVI AND
+T3 > 1: sick (12.95/0.3)
+
+referral_source = SVI AND
+sex = M: sick (10.48/2.28)
+
+sick = f AND
+referral_source = SVI AND
+age > 51: negative (7.16/1.0)
+
+referral_source = other: negative (4.0/1.0)
+
+T3 <= 1.5: sick (7.56/0.56)
+
+: negative (2.16)
+
+Number of Rules  : 	20
+
+
+Time taken to build model: 0.15 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3720               98.6214 %
+Incorrectly Classified Instances        52                1.3786 %
+Kappa statistic                          0.8801
+Mean absolute error                      0.0164
+Root mean squared error                  0.1107
+Relative absolute error                 14.2412 %
+Root relative squared error             46.1561 %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.993    0.113    0.993      0.993    0.993      0.880    0.956     0.993     negative
+                 0.887    0.007    0.887      0.887    0.887      0.880    0.956     0.848     sick
+Weighted Avg.    0.986    0.106    0.986      0.986    0.986      0.880    0.956     0.984     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3515   26 |    a = negative
+   26  205 |    b = sick
+

@@ -1,0 +1,122 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     sick-weka.filters.unsupervised.attribute.Discretize-D-B2-M-1.0-Rfirst-last-precision6
+Instances:    3772
+Attributes:   30
+              age_1
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH_1
+              T3_measured
+              T3_1
+              TT4_measured
+              TT4_1
+              T4U_measured
+              T4U_1
+              FTI_measured
+              FTI_1
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    5-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+referral_source = other AND
+T3_measured = t AND
+sick = f AND
+T4U_measured = t AND
+T4U_1 = '(-inf-1.285]' AND
+tumor = f AND
+on_antithyroid_medication = f AND
+thyroid_surgery = f AND
+psych = f AND
+TT4_1 = '(-inf-216]' AND
+FTI_1 = '(-inf-198.5]': negative (1108.0/27.0)
+
+referral_source = other: negative (1093.0/6.0)
+
+referral_source = SVHC AND
+query_hypothyroid = f: negative (376.0/6.0)
+
+referral_source = SVI AND
+thyroid_surgery = f AND
+lithium = f AND
+TT4_measured = t AND
+psych = f AND
+T3_measured = t AND
+TT4_1 = '(-inf-216]' AND
+query_hypothyroid = f AND
+T4U_1 = '(-inf-1.285]' AND
+sick = f AND
+TSH_measured = t AND
+FTI_measured = t AND
+FTI_1 = '(-inf-198.5]' AND
+query_hyperthyroid = f AND
+query_on_thyroxine = f AND
+goitre = f AND
+sex = F: negative (436.41/73.28)
+
+referral_source = SVI AND
+thyroid_surgery = f AND
+TT4_measured = t AND
+T3_measured = t AND
+T4U_1 = '(-inf-1.285]' AND
+tumor = f AND
+psych = f: negative (503.39/104.43)
+
+psych = f: negative (238.2/8.29)
+
+sick = f: negative (15.0/4.0)
+
+: sick (2.0)
+
+Number of Rules  : 	8
+
+
+Time taken to build model: 0.11 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3536               93.7434 %
+Incorrectly Classified Instances       236                6.2566 %
+Kappa statistic                          0.0121
+Mean absolute error                      0.1028
+Root mean squared error                  0.2291
+Relative absolute error                 89.2466 %
+Root relative squared error             95.5371 %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.998    0.991    0.939      0.998    0.968      0.033    0.799     0.980     negative
+                 0.009    0.002    0.222      0.009    0.017      0.033    0.799     0.183     sick
+Weighted Avg.    0.937    0.931    0.895      0.937    0.909      0.033    0.799     0.932     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3534    7 |    a = negative
+  229    2 |    b = sick
+
